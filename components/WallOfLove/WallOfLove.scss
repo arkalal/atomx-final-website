@@ -1,0 +1,86 @@
+.wall-of-love {
+  width: 100%;
+  min-height: 100vh;
+  background: #feebdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.wall-of-love-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.wall-of-love-heading {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 0.9;
+  margin: 0;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wall-of-love-line {
+  display: block;
+  overflow: hidden;
+}
+
+.wall-of-love-cta {
+  margin-top: 1rem;
+}
+
+.wall-of-love-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #fff;
+  border: none;
+  color: #1a1a1a;
+  padding: 0.7rem 0.7rem 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    transform: scale(1.03);
+  }
+}
+
+.wall-of-love-btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0524f;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .wall-of-love {
+    min-height: 70vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .wall-of-love-heading {
+    font-size: clamp(3.5rem, 18vw, 8rem);
+  }
+}

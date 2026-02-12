@@ -1,0 +1,178 @@
+.tapx-features {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #feebdf;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+.tapx-features__header {
+  flex-shrink: 0;
+  z-index: 10;
+  position: relative;
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-weight: 700;
+  color: #2a1a0e;
+  text-align: center;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0;
+  padding: 2rem 2rem 1rem;
+  background: #feebdf;
+  will-change: transform;
+}
+
+/* ============================================
+   CARDS CONTAINER
+   ============================================ */
+.tapx-features__cards {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: visible;
+}
+
+/* ============================================
+   INDIVIDUAL CARD - GSAP STACKING
+   ============================================ */
+.tapx-features__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  padding: 0.8rem 5rem 8rem;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.06);
+  will-change: transform;
+}
+
+.tapx-features__card--accent {
+  background: #f5d623;
+}
+
+.tapx-features__card--light {
+  background: #fff;
+}
+
+/* ============================================
+   CARD CONTENT LAYOUT
+   ============================================ */
+.tapx-features__card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tapx-features__card-number {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2a1a0e;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  padding-top: 0.4rem;
+  opacity: 0.7;
+}
+
+.tapx-features__card-text {
+  flex: 1;
+}
+
+.tapx-features__card-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: #2a1a0e;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+}
+
+.tapx-features__card-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+  font-weight: 400;
+  color: #3a2a1a;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 580px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+  .tapx-features__card {
+    padding: 0.8rem 3.5rem 6rem;
+  }
+
+  .tapx-features__card-content {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tapx-features__header {
+    font-size: clamp(2rem, 7vw, 3rem);
+    padding: 1.5rem 1.5rem 0.8rem;
+  }
+
+  .tapx-features__card {
+    padding: 0.6rem 1.8rem 5rem;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .tapx-features__card-content {
+    gap: 1.5rem;
+  }
+
+  .tapx-features__card-number {
+    font-size: 0.9rem;
+    padding-top: 0.3rem;
+  }
+
+  .tapx-features__card-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    margin-bottom: 1rem;
+  }
+
+  .tapx-features__card-desc {
+    font-size: 0.88rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tapx-features__header {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .tapx-features__card {
+    padding: 0.5rem 1.2rem 4rem;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .tapx-features__card-content {
+    gap: 1rem;
+  }
+
+  .tapx-features__card-title {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .tapx-features__card-desc {
+    font-size: 0.85rem;
+  }
+}

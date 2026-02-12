@@ -1,0 +1,137 @@
+.image-boxes-section {
+  width: 100%;
+  background: #feebdf;
+  padding: 6rem 4rem 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-boxes-star {
+  position: absolute;
+  z-index: 5;
+  will-change: transform;
+
+  svg {
+    width: clamp(50px, 6vw, 80px);
+    height: clamp(50px, 6vw, 80px);
+  }
+}
+
+.image-boxes-star--top {
+  top: 3rem;
+  left: 8%;
+}
+
+.image-boxes-star--bottom {
+  bottom: 4rem;
+  right: 8%;
+
+  svg {
+    width: clamp(40px, 5vw, 60px);
+    height: clamp(40px, 5vw, 60px);
+  }
+}
+
+.image-boxes-layout {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-box {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  will-change: transform, opacity;
+
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.image-box--large {
+  width: 62%;
+  height: 100vh;
+  z-index: 2;
+  border-radius: 18px;
+}
+
+.image-box--small-left {
+  position: absolute;
+  left: 10%;
+  bottom: 30%;
+  width: 16%;
+  height: 22vh;
+  z-index: 3;
+  border-radius: 14px;
+}
+
+.image-box--small-right {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 17%;
+  height: 22vh;
+  z-index: 3;
+  border-radius: 14px;
+}
+
+.image-box--bottom {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15%;
+  height: 20vh;
+  z-index: 4;
+  border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+  .image-boxes-section {
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .image-boxes-star--top {
+    top: 2rem;
+    left: 4%;
+  }
+
+  .image-boxes-star--bottom {
+    bottom: 2rem;
+    right: 4%;
+  }
+
+  .image-box--large {
+    width: 78%;
+    height: 50vh;
+  }
+
+  .image-box--small-left {
+    width: 28%;
+    height: 16vh;
+    left: 5%;
+    bottom: 18%;
+  }
+
+  .image-box--small-right {
+    width: 26%;
+    height: 16vh;
+    right: 5%;
+    top: 8%;
+  }
+
+  .image-box--bottom {
+    width: 26%;
+    height: 14vh;
+    bottom: 2%;
+  }
+}

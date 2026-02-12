@@ -1,0 +1,213 @@
+.tapx-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #feebdf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ============================================
+   BIG FADED BACKGROUND TITLE
+   ============================================ */
+.tapx-hero__big-title {
+  font-family: var(--font-display);
+  font-size: clamp(5.5rem, 14vw, 14rem);
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(180deg, #e87040 0%, #f09050 55%, #f0a868 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  position: absolute;
+  top: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform, opacity;
+  white-space: nowrap;
+}
+
+/* ============================================
+   EXPANDABLE WHITE BOX
+   ============================================ */
+.tapx-hero__box {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 68vh;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow:
+    0 8px 60px rgba(0, 0, 0, 0.06),
+    0 2px 20px rgba(0, 0, 0, 0.03);
+  will-change: width, height;
+}
+
+.tapx-hero__box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 3rem 0;
+  overflow: hidden;
+}
+
+/* ============================================
+   BOX TITLE
+   ============================================ */
+.tapx-hero__box-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-weight: 700;
+  color: #2a1a0e;
+  text-align: center;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  z-index: 2;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   BOX IMAGE
+   ============================================ */
+.tapx-hero__box-image {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  will-change: transform;
+  overflow: visible;
+
+  img {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 22px;
+    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.1));
+  }
+}
+
+/* ============================================
+   SUB TEXT - BOTTOM RIGHT
+   ============================================ */
+.tapx-hero__sub-text {
+  position: absolute;
+  bottom: 3rem;
+  right: 3.5rem;
+  max-width: 300px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #4a3a2a;
+  line-height: 1.65;
+  text-align: left;
+  opacity: 0;
+  margin: 0;
+  z-index: 3;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+  .tapx-hero__box {
+    width: 72%;
+  }
+
+  .tapx-hero__sub-text {
+    max-width: 280px;
+    font-size: 0.88rem;
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tapx-hero__big-title {
+    font-size: clamp(3.5rem, 18vw, 7rem);
+    top: 2vh;
+  }
+
+  .tapx-hero__box {
+    width: 94% !important;
+    height: 65vh !important;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .tapx-hero__box-inner {
+    padding: 1.8rem 1.5rem 0;
+  }
+
+  .tapx-hero__box-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .tapx-hero__box-image {
+    img {
+      width: 200px;
+      height: 250px;
+    }
+  }
+
+  .tapx-hero__sub-text {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    max-width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tapx-hero__big-title {
+    font-size: clamp(2.8rem, 20vw, 5rem);
+    top: 1.5vh;
+  }
+
+  .tapx-hero__box {
+    width: 96% !important;
+    height: 60vh !important;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .tapx-hero__box-inner {
+    padding: 1.2rem 1rem 0;
+  }
+
+  .tapx-hero__box-title {
+    font-size: 1.6rem;
+  }
+
+  .tapx-hero__box-image {
+    img {
+      width: 160px;
+      height: 200px;
+    }
+  }
+}

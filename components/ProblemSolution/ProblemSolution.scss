@@ -1,0 +1,270 @@
+/* ============================================
+   PROBLEM → SOLUTION — HORIZONTAL SCROLL SECTION
+   ============================================ */
+.problem-solution {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* ============================================
+   HEADING AREA — centred with generous spacing
+   ============================================ */
+.problem-solution__heading-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.problem-solution__heading {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  color: #e85d04;
+  text-align: center;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0;
+  padding: 0 2rem;
+  opacity: 1;
+  will-change: opacity;
+}
+
+/* ============================================
+   GALLERY WRAPPER — pinned + horizontal scroll
+   ============================================ */
+.problem-solution__gallery {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.problem-solution__strip {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 50vw 0 100vw;
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   INDIVIDUAL CARDS
+   ============================================ */
+.problem-solution__card {
+  flex-shrink: 0;
+  width: 26vw;
+  min-width: 320px;
+  max-width: 420px;
+  min-height: 520px;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.problem-solution__card:hover {
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- Card colour variants ---- */
+.problem-solution__card--problem {
+  background: #2a1a0e;
+  color: #fff;
+}
+
+.problem-solution__card--problem-deep {
+  background: #3d1f0a;
+  color: #fff;
+}
+
+.problem-solution__card--solution {
+  background: #fff;
+  color: #2a1a0e;
+  border: 1px solid rgba(42, 26, 14, 0.08);
+}
+
+.problem-solution__card--solution-how {
+  background: #feebdf;
+  color: #2a1a0e;
+}
+
+.problem-solution__card--outcome {
+  background: #f5d623;
+  color: #2a1a0e;
+}
+
+/* ---- Card label (PROBLEM / SOLUTION / OUTCOME) ---- */
+.problem-solution__card-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 2rem;
+  opacity: 0.7;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.problem-solution__card-label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.problem-solution__card--problem .problem-solution__card-label-dot,
+.problem-solution__card--problem-deep .problem-solution__card-label-dot {
+  background: #e85d04;
+}
+
+.problem-solution__card--solution .problem-solution__card-label-dot,
+.problem-solution__card--solution-how .problem-solution__card-label-dot {
+  background: #2a1a0e;
+}
+
+.problem-solution__card--outcome .problem-solution__card-label-dot {
+  background: #2a1a0e;
+}
+
+/* ---- Card headline ---- */
+.problem-solution__card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+}
+
+/* ---- Card body text ---- */
+.problem-solution__card-text {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.05vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ---- Card number badge ---- */
+.problem-solution__card-number {
+  font-family: var(--font-sans);
+  font-size: 5rem;
+  font-weight: 800;
+  opacity: 0.06;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+  .problem-solution__strip {
+    gap: 2.5rem;
+    padding: 0 40vw 0 100vw;
+  }
+
+  .problem-solution__card {
+    width: 30vw;
+    min-width: 300px;
+    min-height: 480px;
+    padding: 2.2rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .problem-solution__heading {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+  }
+
+  .problem-solution__strip {
+    gap: 1.5rem;
+    padding: 0 20vw 0 100vw;
+  }
+
+  .problem-solution__card {
+    width: 65vw;
+    min-width: 280px;
+    max-width: 360px;
+    min-height: 420px;
+    padding: 2rem 1.6rem;
+    border-radius: 16px;
+  }
+
+  .problem-solution__card-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .problem-solution__card-text {
+    font-size: 0.92rem;
+  }
+
+  .problem-solution__card-number {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .problem-solution__heading {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+    padding: 0 1.2rem;
+  }
+
+  .problem-solution__strip {
+    gap: 1.2rem;
+    padding: 0 10vw 0 100vw;
+  }
+
+  .problem-solution__card {
+    width: 78vw;
+    min-width: 260px;
+    max-width: 330px;
+    min-height: 380px;
+    padding: 1.6rem 1.3rem;
+    border-radius: 14px;
+  }
+
+  .problem-solution__card-label {
+    margin-bottom: 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .problem-solution__card-title {
+    font-size: clamp(1.3rem, 6vw, 1.7rem);
+    margin-bottom: 1rem;
+  }
+
+  .problem-solution__card-text {
+    font-size: 0.88rem;
+  }
+
+  .problem-solution__card-number {
+    font-size: 3rem;
+  }
+}
