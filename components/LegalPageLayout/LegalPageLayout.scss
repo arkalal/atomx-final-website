@@ -5,7 +5,7 @@
 .legal-page {
   width: 100%;
   min-height: 100vh;
-  background: #feebdf;
+  background: #faf8f5;
   position: relative;
   overflow: hidden;
 }
@@ -21,7 +21,7 @@
   top: 0;
   left: 0;
   z-index: 100;
-  background: rgba(254, 235, 223, 0.85);
+  background: rgba(250, 248, 245, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -172,8 +172,6 @@
 
 .legal-section {
   margin-bottom: 3rem;
-  opacity: 0;
-  transform: translateY(30px);
 }
 
 .legal-section-number {

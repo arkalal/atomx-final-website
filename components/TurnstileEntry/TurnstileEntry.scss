@@ -1,0 +1,234 @@
+/* ============================================
+   TURNSTILE ENTRY — Parallax Column Gallery
+   ============================================ */
+.te {
+  position: relative;
+  width: 100%;
+}
+
+.te__pin-wrap {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.te__bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  overflow: hidden;
+}
+
+/* ============================================
+   6-COLUMN GRID LINES
+   ============================================ */
+.te__grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.te__col-line {
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  height: 100%;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+/* ============================================
+   CENTER CONTENT — Title + Eyebrow
+   ============================================ */
+.te__center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.te__eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+  transition: color 0.4s ease;
+}
+
+.te__eyebrow--light {
+  color: #3a3a3a !important;
+}
+
+.te__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+.te__heading--light {
+  color: #1a1a1a !important;
+}
+
+.te__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 2rem auto 0;
+}
+
+/* ============================================
+   FLOATING PARALLAX IMAGES
+   ============================================ */
+.te__float-img {
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  will-change: transform;
+
+  img {
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.te__float-img--col1 {
+  left: 0;
+  width: calc(100% / 6);
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.te__float-img--col2 {
+  left: calc(100% / 6);
+  width: calc(100% / 6);
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.te__float-img--col3 {
+  left: calc(200% / 6);
+  width: calc(100% / 6);
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.te__float-img--col4 {
+  left: calc(300% / 6);
+  width: calc(100% / 6);
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.te__float-img--col5 {
+  left: calc(400% / 6);
+  width: calc(100% / 6);
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.te__float-img--col6 {
+  left: calc(500% / 6);
+  width: calc(100% / 6);
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+  .te__heading {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .te__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .te__heading {
+    font-size: clamp(1.6rem, 6vw, 2.6rem);
+  }
+
+  .te__eyebrow {
+    font-size: 0.62rem;
+    margin-bottom: 1rem;
+  }
+
+  .te__float-img--col1 {
+    left: 0;
+    width: 25%;
+  }
+
+  .te__float-img--col2 {
+    left: 25%;
+    width: 25%;
+  }
+
+  .te__float-img--col3 {
+    left: 25%;
+    width: 25%;
+  }
+
+  .te__float-img--col4 {
+    left: 50%;
+    width: 25%;
+  }
+
+  .te__float-img--col5 {
+    left: 75%;
+    width: 25%;
+  }
+
+  .te__float-img--col6 {
+    left: 75%;
+    width: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .te__heading {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+
+  .te__eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+  }
+
+  .te__dot {
+    width: 6px;
+    height: 6px;
+    margin-top: 1.5rem;
+  }
+
+  .te__float-img {
+    img {
+      height: 180px !important;
+    }
+  }
+}

@@ -84,7 +84,7 @@ const HeroSection = () => {
           playsInline
           preload="auto"
           autoPlay
-          poster="/hero-poster.jpg"
+          poster=""
         >
           <source src="/videos/atomx2.mp4" type="video/mp4" />
         </video>

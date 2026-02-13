@@ -11,7 +11,7 @@ const experiencesData = [
     tags: ["NFC", "RFID WRISTBANDS", "TAP & PAY"],
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=600&fit=crop",
-    hoverColor: "rgba(200, 180, 220, 0.4)",
+    hoverColor: "rgba(200, 180, 220, 0.12)",
     icon: "💳",
   },
   {
@@ -19,7 +19,7 @@ const experiencesData = [
     tags: ["1-SEC TRANSACTIONS", "OFFLINE-FIRST", "REAL-TIME REPORTS"],
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=600&fit=crop",
-    hoverColor: "rgba(180, 210, 230, 0.4)",
+    hoverColor: "rgba(180, 210, 230, 0.12)",
     icon: "⚡",
   },
   {
@@ -27,7 +27,7 @@ const experiencesData = [
     tags: ["FACIAL RECOGNITION", "RFID & QR", "LIVE TRACKING"],
     image:
       "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=600&fit=crop",
-    hoverColor: "rgba(220, 190, 200, 0.4)",
+    hoverColor: "rgba(220, 190, 200, 0.12)",
     icon: "�",
   },
   {
@@ -35,7 +35,7 @@ const experiencesData = [
     tags: ["HEATMAPS", "REAL-TIME DATA", "ATTENDEE INSIGHTS"],
     image:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=600&fit=crop",
-    hoverColor: "rgba(180, 220, 200, 0.4)",
+    hoverColor: "rgba(180, 220, 200, 0.12)",
     icon: "📊",
   },
   {
@@ -43,7 +43,7 @@ const experiencesData = [
     tags: ["API ACCESS", "CUSTOM SETUP", "WHITE-LABEL"],
     image:
       "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=600&fit=crop",
-    hoverColor: "rgba(210, 200, 170, 0.4)",
+    hoverColor: "rgba(210, 200, 170, 0.12)",
     icon: "🔗",
   },
 ];

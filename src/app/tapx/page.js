@@ -1,5 +1,6 @@
 import TapXHero from "../../../components/TapXHero/TapXHero";
 import TapXFeatures from "../../../components/TapXFeatures/TapXFeatures";
+import HowTapXFits from "../../../components/HowTapXFits/HowTapXFits";
 import ProblemSolution from "../../../components/ProblemSolution/ProblemSolution";
 import Footer from "../../../components/Footer/Footer";
 
@@ -15,6 +16,7 @@ export default function TapXPage() {
       <TapXHero />
       <TapXFeatures />
       <ProblemSolution />
+      <HowTapXFits />
       <Footer />
     </main>
   );

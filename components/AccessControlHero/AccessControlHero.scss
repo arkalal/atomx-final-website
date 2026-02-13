@@ -1,0 +1,166 @@
+.ac-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #faf8f5;
+  overflow: hidden;
+}
+
+/* ============================================
+   HEADLINE — Positioned at top, full-width
+   ============================================ */
+.ac-hero__headline {
+  position: absolute;
+  bottom: 65vh;
+  left: 0;
+  width: 100%;
+  padding: 0 1rem;
+  z-index: 1;
+
+  font-family: var(--font-display);
+  font-size: clamp(6.5rem, 11.5vw, 16rem);
+  font-weight: bolder;
+
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+
+  color: transparent;
+  background: linear-gradient(180deg, #c4b5a4 0%, #a89888 40%, #8a7a6a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+
+  transform: scaleY(1.8);
+  transform-origin: center bottom;
+}
+
+/* ============================================
+   IMAGE WRAP — Starts at bottom, grows to full
+   ============================================ */
+.ac-hero__image-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55vh;
+  overflow: hidden;
+  z-index: 2;
+  border-radius: 0;
+  will-change: top, height, border-radius;
+}
+
+.ac-hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ac-hero__image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.02) 30%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+  opacity: 0.6;
+  will-change: opacity;
+}
+
+/* ============================================
+   SUBLINE — Bottom Left on image
+   ============================================ */
+.ac-hero__subline-wrap {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 4rem;
+  z-index: 3;
+}
+
+.ac-hero__eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.ac-hero__subline {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+  .ac-hero__subline-wrap {
+    left: 3rem;
+    bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ac-hero__headline {
+    font-size: clamp(2.5rem, 11vw, 5rem);
+    bottom: 48vh;
+  }
+
+  .ac-hero__image-wrap {
+    height: 50vh;
+  }
+
+  .ac-hero__subline-wrap {
+    left: 1.5rem;
+    bottom: 2rem;
+  }
+
+  .ac-hero__subline {
+    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+  }
+
+  .ac-hero__eyebrow {
+    font-size: 0.65rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ac-hero__headline {
+    font-size: clamp(2rem, 11vw, 3.5rem);
+    bottom: 43vh;
+  }
+
+  .ac-hero__image-wrap {
+    height: 45vh;
+  }
+
+  .ac-hero__subline-wrap {
+    left: 1.2rem;
+    bottom: 1.5rem;
+  }
+
+  .ac-hero__subline {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+}

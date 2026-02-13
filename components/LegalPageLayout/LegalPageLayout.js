@@ -34,7 +34,7 @@ const LegalPageLayout = ({
       tl.fromTo(
         topbarRef.current,
         { y: -40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
       );
 
       if (heroLabelRef.current) {
@@ -42,7 +42,7 @@ const LegalPageLayout = ({
           heroLabelRef.current,
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
-          "-=0.4"
+          "-=0.4",
         );
       }
 
@@ -50,7 +50,7 @@ const LegalPageLayout = ({
         heroTitleRef.current,
         { y: 40, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
-        "-=0.3"
+        "-=0.3",
       );
 
       if (heroMetaRef.current) {
@@ -58,7 +58,7 @@ const LegalPageLayout = ({
           heroMetaRef.current,
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
-          "-=0.4"
+          "-=0.4",
         );
       }
 
@@ -66,7 +66,7 @@ const LegalPageLayout = ({
         heroDividerRef.current,
         { scaleX: 0, transformOrigin: "left center" },
         { scaleX: 1, duration: 0.8, ease: "power3.inOut" },
-        "-=0.3"
+        "-=0.3",
       );
 
       if (summaryRef.current) {
@@ -74,27 +74,24 @@ const LegalPageLayout = ({
           summaryRef.current,
           { y: 30, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" },
-          "-=0.3"
+          "-=0.3",
         );
       }
 
       const sectionEls = sectionsRef.current.filter(Boolean);
       sectionEls.forEach((el) => {
-        gsap.fromTo(
-          el,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.7,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 85%",
-              toggleActions: "play none none none",
-            },
-          }
-        );
+        gsap.set(el, { y: 30, opacity: 0 });
+        gsap.to(el, {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
       });
     }, pageRef);
 

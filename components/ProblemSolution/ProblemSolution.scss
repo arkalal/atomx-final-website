@@ -28,7 +28,7 @@
   font-family: var(--font-display);
   font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 700;
-  color: #e85d04;
+  color: #0a0a0a;
   text-align: center;
   line-height: 1.08;
   letter-spacing: -0.03em;
@@ -87,29 +87,29 @@
 
 /* ---- Card colour variants ---- */
 .problem-solution__card--problem {
-  background: #2a1a0e;
-  color: #fff;
+  background: #0a0a0a;
+  color: #ffffff;
 }
 
 .problem-solution__card--problem-deep {
-  background: #3d1f0a;
-  color: #fff;
+  background: #1a1a1a;
+  color: #ffffff;
 }
 
 .problem-solution__card--solution {
-  background: #fff;
-  color: #2a1a0e;
-  border: 1px solid rgba(42, 26, 14, 0.08);
+  background: #ffffff;
+  color: #0a0a0a;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .problem-solution__card--solution-how {
-  background: #feebdf;
-  color: #2a1a0e;
+  background: #f5f5f5;
+  color: #0a0a0a;
 }
 
 .problem-solution__card--outcome {
-  background: #f5d623;
-  color: #2a1a0e;
+  background: #0a0a0a;
+  color: #ffffff;
 }
 
 /* ---- Card label (PROBLEM / SOLUTION / OUTCOME) ---- */
@@ -135,16 +135,16 @@
 
 .problem-solution__card--problem .problem-solution__card-label-dot,
 .problem-solution__card--problem-deep .problem-solution__card-label-dot {
-  background: #e85d04;
+  background: #ffffff;
 }
 
 .problem-solution__card--solution .problem-solution__card-label-dot,
 .problem-solution__card--solution-how .problem-solution__card-label-dot {
-  background: #2a1a0e;
+  background: #0a0a0a;
 }
 
 .problem-solution__card--outcome .problem-solution__card-label-dot {
-  background: #2a1a0e;
+  background: #ffffff;
 }
 
 /* ---- Card headline ---- */

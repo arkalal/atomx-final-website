@@ -1,13 +1,14 @@
 .site-footer {
   width: 100%;
   min-height: 80vh;
-  background: #feebdf;
+  background: #0a0a0a;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 6rem 2rem 2rem;
   position: relative;
+  z-index: 10;
 }
 
 .footer-content {
@@ -24,7 +25,7 @@
   font-family: var(--font-display);
   font-size: clamp(5rem, 18vw, 16rem);
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
   line-height: 0.85;
   margin: 0;
   letter-spacing: -0.03em;
@@ -33,7 +34,7 @@
 .footer-tagline {
   font-family: var(--font-sans);
   font-size: clamp(0.7rem, 1.2vw, 1rem);
-  color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin: 0;
@@ -50,14 +51,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: auto;
+  position: relative;
+  z-index: 5;
 }
 
 .footer-copy {
   font-family: var(--font-sans);
   font-size: 0.75rem;
-  color: #666;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .footer-links {
@@ -70,12 +73,15 @@
 .footer-link {
   font-family: var(--font-sans);
   font-size: 0.75rem;
-  color: #666;
+  color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
   transition: color 0.2s ease;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
 
   &:hover {
-    color: #1a1a1a;
+    color: #ffffff;
   }
 }
 
