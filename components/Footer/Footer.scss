@@ -29,6 +29,11 @@
   line-height: 0.85;
   margin: 0;
   letter-spacing: -0.03em;
+
+  &::after {
+    content: ".";
+    color: #e0524f;
+  }
 }
 
 .footer-tagline {
@@ -81,7 +86,7 @@
   cursor: pointer;
 
   &:hover {
-    color: #ffffff;
+    color: #e0524f;
   }
 }
 

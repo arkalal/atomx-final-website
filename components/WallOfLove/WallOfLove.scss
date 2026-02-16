@@ -27,6 +27,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e0524f;
+    margin-top: 1.5rem;
+  }
 }
 
 .wall-of-love-line {

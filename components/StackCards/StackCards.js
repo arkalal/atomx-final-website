@@ -11,16 +11,14 @@ const cardsData = [
   {
     category: "CASHLESS PAYMENTS",
     title: "Every Second\nSells",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
+    image: "/assets/home/cashlessStack.jpg",
     pills: [">1 Second", "Works Offline", "Zero Cash Handling"],
     cta: "Explore Cashless Payments",
   },
   {
     category: "TapX",
     title: "Tap. Pay.\nDone.",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=800&fit=crop",
+    image: "/assets/home/tapX-Stack.jpeg",
     pills: [
       "1-Second Transactions",
       "Offline-First Payments",
@@ -31,8 +29,7 @@ const cardsData = [
   {
     category: "ACCESS CONTROL",
     title: "Entry Without\nExcuses",
-    image:
-      "https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&h=800&fit=crop",
+    image: "/assets/home/accessConStack.jpeg",
     pills: ["Facial Recognition", "RFID & QR", "Real-Time Tracking"],
     cta: "Explore Access Control",
   },

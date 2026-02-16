@@ -10,29 +10,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cardsData = [
   {
-    image:
-      "https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6518.jpeg",
     title: "Live Entry Monitoring",
     description:
       "Track entries as they happen across all access points. Know exactly how many attendees have entered, zone by zone, without delays or manual checks.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6621.jpeg",
     title: "Crowd Flow Awareness",
     description:
       "Identify congestion early with real-time entry data. Helps teams react faster to manage queues and balance gate usage.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6630.jpeg",
     title: "Centralized Access Dashboard",
     description:
       "All entry activity is visible from a single control view. Security and operations teams stay aligned with the same live information.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6595.jpeg",
     title: "Operational Confidence",
     description:
       "Real-time visibility reduces guesswork. Decisions are based on live data, not assumptions.",
@@ -64,7 +60,7 @@ const RealTimeEntry = () => {
             start: "top 70%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       cardRefs.current.filter(Boolean).forEach((card, i) => {
@@ -82,7 +78,7 @@ const RealTimeEntry = () => {
               start: "top 75%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
     }, sectionRef);

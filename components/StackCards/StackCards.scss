@@ -5,6 +5,7 @@
   padding: 0;
   position: relative;
   overflow: hidden;
+  padding-bottom: 6rem;
 }
 
 .stack-cards-container {
@@ -86,8 +87,8 @@
 
 .stack-card-category {
   display: inline-block;
-  background: #fff;
-  color: #1a1a1a;
+  background: #e0524f;
+  color: #ffffff;
   font-family: var(--font-sans);
   font-size: 0.65rem;
   font-weight: 600;

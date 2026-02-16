@@ -16,10 +16,6 @@ const HeroSection = () => {
   const [animationDone, setAnimationDone] = useState(false);
 
   useLayoutEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
-
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         onComplete: () => setAnimationDone(true),
@@ -76,18 +72,17 @@ const HeroSection = () => {
   return (
     <section className="hero-section" ref={heroRef}>
       <div className="hero-card-wrapper" ref={cardWrapperRef}>
-        <video
-          ref={videoRef}
-          className="hero-video"
-          muted
-          loop
-          playsInline
-          preload="auto"
-          autoPlay
-          poster=""
-        >
-          <source src="/videos/atomx2.mp4" type="video/mp4" />
-        </video>
+        <div className="hero-video-wrapper">
+          <iframe
+            ref={videoRef}
+            className="hero-video"
+            src="https://www.youtube.com/embed/tiyNNUC1qzY?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=tiyNNUC1qzY&playsinline=1&enablejsapi=1"
+            title="AtomX Hero Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
         <div className="hero-card-overlay" />
 
         {/* Hero content overlaid on the card */}

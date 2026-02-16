@@ -81,7 +81,7 @@ const AccessControlHero = () => {
 
       <div className="ac-hero__image-wrap" ref={imageWrapRef}>
         <img
-          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&h=900&fit=crop&q=80"
+          src="/assets/access-control/0V5A7084.jpeg"
           alt="Access Control Systems"
           className="ac-hero__image"
           loading="eager"

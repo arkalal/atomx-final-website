@@ -42,15 +42,18 @@
 }
 
 .closing-highlight--cyan {
-  background: rgba(130, 220, 230, 0.2);
+  background: rgba(224, 82, 79, 0.25);
+  color: #ff8a87;
 }
 
 .closing-highlight--lavender {
-  background: rgba(180, 170, 220, 0.2);
+  background: rgba(224, 82, 79, 0.18);
+  color: #e0524f;
 }
 
 .closing-highlight--pink {
-  background: rgba(232, 77, 138, 0.18);
+  background: rgba(224, 82, 79, 0.12);
+  color: #c94542;
 }
 
 .closing-cta-btn-wrap {
@@ -98,6 +101,7 @@
   .closing-cta {
     padding: 4rem 1.5rem;
     min-height: 60vh;
+    border-radius: 0 0 16px 16px;
   }
 
   .closing-cta-text {

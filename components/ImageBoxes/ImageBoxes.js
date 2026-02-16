@@ -146,11 +146,11 @@ const ImageBoxes = () => {
         >
           <path
             d="M40 0L42.5 37.5L80 40L42.5 42.5L40 80L37.5 42.5L0 40L37.5 37.5L40 0Z"
-            fill="#1a1a1a"
+            fill="#e0524f"
           />
           <path
             d="M40 10L41.5 38.5L70 40L41.5 41.5L40 70L38.5 41.5L10 40L38.5 38.5L40 10Z"
-            fill="#1a1a1a"
+            fill="#e0524f"
           />
         </svg>
       </div>
@@ -169,11 +169,11 @@ const ImageBoxes = () => {
         >
           <path
             d="M40 0L42.5 37.5L80 40L42.5 42.5L40 80L37.5 42.5L0 40L37.5 37.5L40 0Z"
-            fill="#1a1a1a"
+            fill="#e0524f"
           />
           <path
             d="M40 10L41.5 38.5L70 40L41.5 41.5L40 70L38.5 41.5L10 40L38.5 38.5L40 10Z"
-            fill="#1a1a1a"
+            fill="#e0524f"
           />
         </svg>
       </div>
@@ -181,30 +181,42 @@ const ImageBoxes = () => {
       <div className="image-boxes-layout">
         {/* Small left card - overlapping center */}
         <div className="image-box image-box--small-left" ref={leftRef}>
-          <video muted loop playsInline autoPlay preload="auto">
-            <source src="/videos/atomx1.mp4" type="video/mp4" />
-          </video>
+          <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=500&fit=crop&q=80"
+            alt="Event crowd"
+            loading="eager"
+          />
         </div>
 
         {/* Large center card - tall and narrower */}
         <div className="image-box image-box--large" ref={centerRef}>
-          <video muted loop playsInline autoPlay preload="auto">
-            <source src="/videos/atomx2.mp4" type="video/mp4" />
-          </video>
+          <iframe
+            src="https://www.youtube.com/embed/fe_sUj8OWaY?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=fe_sUj8OWaY&playsinline=1"
+            title="AtomX Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
 
         {/* Small right card - overlapping center */}
         <div className="image-box image-box--small-right" ref={rightRef}>
-          <video muted loop playsInline autoPlay preload="auto">
-            <source src="/videos/atomx3.mp4" type="video/mp4" />
-          </video>
+          <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=500&fit=crop&q=80"
+            alt="Live event"
+            loading="eager"
+          />
         </div>
 
         {/* Small bottom center card - overlapping center bottom */}
         <div className="image-box image-box--bottom" ref={bottomRef}>
-          <video muted loop playsInline autoPlay preload="auto">
-            <source src="/videos/atomx1.mp4" type="video/mp4" />
-          </video>
+          <iframe
+            src="https://www.youtube.com/embed/ts6kTurcUBk?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=ts6kTurcUBk&playsinline=1"
+            title="AtomX Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>

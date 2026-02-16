@@ -110,7 +110,7 @@ const TapXHero = () => {
 
           <div className="tapx-hero__box-image" ref={boxImageRef}>
             <img
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=1000&fit=crop"
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=800&fit=crop&q=80"
               alt="TapX NFC Payment Device"
               loading="eager"
             />

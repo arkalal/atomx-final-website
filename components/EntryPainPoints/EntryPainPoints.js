@@ -13,40 +13,35 @@ const painPointsData = [
     title: "Slow & Congested Entry",
     description:
       "High footfall moments create long queues at entry points. Manual checks and disconnected systems slow down attendee flow, impacting first impressions and overall event experience.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6518.jpeg",
   },
   {
     number: "02",
     title: "Ticket Misuse & Unauthorized Access",
     description:
       "Shared tickets, duplicate scans, and invalid credentials make it difficult to control who enters the venue—especially during peak hours.",
-    image:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6595.jpeg",
   },
   {
     number: "03",
     title: "Limited Real-Time Visibility",
     description:
       "Without centralized access control, organizers lack live insights into entry counts, gate-wise flow, and crowd distribution across zones.",
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6621.jpeg",
   },
   {
     number: "04",
     title: "Operational Strain on Staff",
     description:
       "Security teams rely heavily on manual verification, increasing workload, human error, and response time during entry surges.",
-    image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/0V5A6630.jpeg",
   },
   {
     number: "05",
     title: "Post-Event Data Gaps",
     description:
       "Entry data is often fragmented or unavailable, making it hard to analyze attendance patterns, peak timings, and access bottlenecks for future planning.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80",
+    image: "/assets/access-control/DSC09118.jpg",
   },
 ];
 

@@ -11,7 +11,7 @@ const credentialsData = [
   {
     id: 1,
     eyebrow: "SUPPORTED TECHNOLOGY",
-    title: "RFID Credentials",
+    title: "RFID Access",
     body: "AtomX access control systems are designed to work with RFID-based credentials, enabling fast and reliable entry validation at turnstiles and gates.",
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=1000&fit=crop&q=80",
@@ -19,7 +19,7 @@ const credentialsData = [
   {
     id: 2,
     eyebrow: "SUPPORTED TECHNOLOGY",
-    title: "QR Code Access",
+    title: "QR Passes",
     body: "QR-based passes can be used for digital tickets, staff access, and temporary credentials, validated securely in real time through the AtomX platform.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=1000&fit=crop&q=80",
@@ -27,7 +27,7 @@ const credentialsData = [
   {
     id: 3,
     eyebrow: "EVENT INFRASTRUCTURE",
-    title: "Wristbands & Cards",
+    title: "Wristbands",
     body: "The system supports event-issued wristbands or cards, integrating them into a unified access control workflow without changing attendee experience.",
     image:
       "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800&h=1000&fit=crop&q=80",

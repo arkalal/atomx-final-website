@@ -67,13 +67,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.5);
+  color: #e0524f;
   margin-bottom: 1.5rem;
   transition: color 0.4s ease;
 }
 
 .te__eyebrow--light {
-  color: #3a3a3a !important;
+  color: #c94542 !important;
 }
 
 .te__heading {
@@ -92,10 +92,10 @@
 }
 
 .te__dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #e0524f;
   margin: 2rem auto 0;
 }
 

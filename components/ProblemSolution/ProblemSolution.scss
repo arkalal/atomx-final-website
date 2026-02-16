@@ -92,19 +92,20 @@
 }
 
 .problem-solution__card--problem-deep {
-  background: #1a1a1a;
-  color: #ffffff;
-}
-
-.problem-solution__card--solution {
   background: #ffffff;
   color: #0a0a0a;
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.problem-solution__card--solution {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
 .problem-solution__card--solution-how {
-  background: #f5f5f5;
+  background: #ffffff;
   color: #0a0a0a;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .problem-solution__card--outcome {
@@ -134,17 +135,14 @@
 }
 
 .problem-solution__card--problem .problem-solution__card-label-dot,
-.problem-solution__card--problem-deep .problem-solution__card-label-dot {
-  background: #ffffff;
+.problem-solution__card--outcome .problem-solution__card-label-dot,
+.problem-solution__card--solution .problem-solution__card-label-dot {
+  background: #e0524f;
 }
 
-.problem-solution__card--solution .problem-solution__card-label-dot,
+.problem-solution__card--problem-deep .problem-solution__card-label-dot,
 .problem-solution__card--solution-how .problem-solution__card-label-dot {
-  background: #0a0a0a;
-}
-
-.problem-solution__card--outcome .problem-solution__card-label-dot {
-  background: #ffffff;
+  background: #e0524f;
 }
 
 /* ---- Card headline ---- */
@@ -172,7 +170,8 @@
   font-family: var(--font-sans);
   font-size: 5rem;
   font-weight: 800;
-  opacity: 0.06;
+  opacity: 1;
+  color: #e0524f;
   position: absolute;
   bottom: 1.5rem;
   right: 2rem;

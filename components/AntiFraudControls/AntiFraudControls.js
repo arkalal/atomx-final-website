@@ -8,10 +8,10 @@ import "./AntiFraudControls.scss";
 gsap.registerPlugin(ScrollTrigger);
 
 const inlineImages = [
-  "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=120&h=80&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=120&h=80&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=120&h=80&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=120&h=80&fit=crop&q=80",
+  "/assets/access-control/0V5A6518.jpeg",
+  "/assets/access-control/0V5A6595.jpeg",
+  "/assets/access-control/0V5A6621.jpeg",
+  "/assets/access-control/0V5A6630.jpeg",
 ];
 
 const AntiFraudControls = () => {

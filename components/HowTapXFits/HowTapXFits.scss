@@ -4,6 +4,8 @@
   height: 100vh;
   background: #ffffff;
   overflow: visible;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 /* ============================================
@@ -22,6 +24,7 @@
   line-height: 1.08;
   letter-spacing: -0.03em;
   margin: 0;
+  margin-bottom: 3rem;
   white-space: nowrap;
   z-index: 5;
 }
@@ -41,7 +44,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  padding: 12vh 3% 10vh;
+  padding: 20vh 3% 10vh;
   z-index: 4;
 }
 
@@ -70,7 +73,7 @@
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 5vw, 5.5rem);
   font-weight: 700;
-  color: #1a0a00;
+  color: #e0524f;
   line-height: 100px;
   text-align: left;
   letter-spacing: -0.02em;
@@ -95,8 +98,8 @@
 
 .how-tapx-fits__phone {
   position: relative;
-  width: 320px;
-  height: 640px;
+  width: 300px;
+  height: 580px;
   border-radius: 48px;
   background: #0a0a0a;
   box-shadow:
@@ -305,7 +308,7 @@
    ============================================ */
 .how-tapx-fits__cta-wrap {
   position: absolute;
-  bottom: 3.5vh;
+  bottom: 2vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;

@@ -7,22 +7,22 @@ import { GoArrowUpRight } from "react-icons/go";
 import "./ExploreSection.scss";
 
 const trailImages = [
-  "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=300&h=400&fit=crop",
+  "/assets/home/gifs/Copy of 0V5A6639.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6674.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6687.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6735.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6639.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6674.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6687.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6735.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6639.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6674.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6687.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6735.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6639.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6674.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6687.jpeg",
+  "/assets/home/gifs/Copy of 0V5A6735.jpeg",
 ];
 
 function playTrailAnimation(img) {

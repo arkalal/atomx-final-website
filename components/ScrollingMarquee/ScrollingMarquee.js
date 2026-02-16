@@ -1,27 +1,21 @@
 import React from "react";
+import {
+  HiOutlineLightningBolt,
+  HiOutlineChip,
+  HiOutlineGlobe,
+  HiOutlineSparkles,
+} from "react-icons/hi";
 import "./ScrollingMarquee.scss";
 
 const marqueeItems = [
-  { type: "text", content: "Discover AtomX" },
-  {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=200&h=200&fit=crop",
-  },
-  { type: "text", content: "Discover AtomX" },
-  {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=200&h=200&fit=crop",
-  },
-  { type: "text", content: "Discover AtomX" },
-  {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=200&h=200&fit=crop",
-  },
-  { type: "text", content: "Discover AtomX" },
-  {
-    type: "image",
-    src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=200&fit=crop",
-  },
+  { type: "text", content: "Discover", highlight: "atomX" },
+  { type: "icon", icon: HiOutlineLightningBolt },
+  { type: "text", content: "Discover", highlight: "atomX" },
+  { type: "icon", icon: HiOutlineChip },
+  { type: "text", content: "Discover", highlight: "atomX" },
+  { type: "icon", icon: HiOutlineGlobe },
+  { type: "text", content: "Discover", highlight: "atomX" },
+  { type: "icon", icon: HiOutlineSparkles },
 ];
 
 const ScrollingMarquee = () => {
@@ -32,11 +26,12 @@ const ScrollingMarquee = () => {
         {[...marqueeItems, ...marqueeItems].map((item, i) =>
           item.type === "text" ? (
             <span key={i} className="marquee-text">
-              {item.content}
+              {item.content}{" "}
+              <span className="marquee-text-highlight">{item.highlight}</span>
             </span>
           ) : (
-            <div key={i} className="marquee-image">
-              <img src={item.src} alt="" loading="lazy" />
+            <div key={i} className="marquee-icon">
+              <item.icon />
             </div>
           ),
         )}
