@@ -198,7 +198,7 @@ const ImageBoxes = () => {
         {/* Small bottom center card - overlapping center bottom */}
         <div className="image-box image-box--bottom" ref={bottomRef}>
           <iframe
-            src="https://www.youtube.com/embed/ts6kTurcUBk?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=ts6kTurcUBk&playsinline=1"
+            src="https://www.youtube.com/embed/GK445949Q5I?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=GK445949Q5I&playsinline=1"
             title="AtomX Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
