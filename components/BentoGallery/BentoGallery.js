@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./BentoGallery.scss";
@@ -74,24 +75,26 @@ const BentoGallery = () => {
           stagger: 0.02,
           ease: "none",
         },
-        0
-      ).to(
-        gallery,
-        {
-          scale: targetScale,
-          duration: 1,
-          ease: "expoScale(1,5)",
-        },
-        0
-      ).to(
-        centerItem,
-        {
-          opacity: 0,
-          duration: 0.3,
-          ease: "none",
-        },
-        0.85
-      );
+        0,
+      )
+        .to(
+          gallery,
+          {
+            scale: targetScale,
+            duration: 1,
+            ease: "expoScale(1,5)",
+          },
+          0,
+        )
+        .to(
+          centerItem,
+          {
+            opacity: 0,
+            duration: 0.3,
+            ease: "none",
+          },
+          0.85,
+        );
     }, wrapRef);
 
     return () => ctx.revert();
@@ -106,7 +109,14 @@ const BentoGallery = () => {
             className="bento-gallery__item"
             ref={(el) => (itemsRef.current[i] = el)}
           >
-            <img src={src} alt="" loading="eager" />
+            <Image
+              src={src}
+              alt=""
+              fill
+              sizes="(max-width: 768px) 50vw, 25vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
           </div>
         ))}
       </div>

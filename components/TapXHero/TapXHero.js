@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
@@ -109,10 +110,13 @@ const TapXHero = () => {
           </h2>
 
           <div className="tapx-hero__box-image" ref={boxImageRef}>
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=800&fit=crop&q=80"
               alt="TapX NFC Payment Device"
-              loading="eager"
+              fill
+              sizes="(max-width: 768px) 300px, 600px"
+              style={{ objectFit: "cover" }}
+              priority
             />
           </div>
 

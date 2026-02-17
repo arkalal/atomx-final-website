@@ -9,6 +9,7 @@ import StackCards from "../../components/StackCards/StackCards";
 // import BentoGallery from "../../components/BentoGallery/BentoGallery";
 import WallOfLove from "../../components/WallOfLove/WallOfLove";
 import ClosingCTA from "../../components/ClosingCTA/ClosingCTA";
+import FeaturedPortfolio from "../../components/FeaturedPortfolio/FeaturedPortfolio";
 import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       {/* <BentoGallery /> */}
       <WallOfLove />
       <ClosingCTA />
+      <FeaturedPortfolio />
       <Footer />
     </main>
   );

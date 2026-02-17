@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
@@ -110,13 +111,15 @@ const ExploreSection = () => {
       {/* Cursor trail images */}
       <div className="explore-trail-container">
         {trailImages.map((src, i) => (
-          <img
+          <Image
             key={i}
             className="explore-trail-img"
             ref={(el) => (flairRef.current[i] = el)}
             src={src}
             alt=""
-            loading="eager"
+            width={150}
+            height={200}
+            priority
           />
         ))}
       </div>

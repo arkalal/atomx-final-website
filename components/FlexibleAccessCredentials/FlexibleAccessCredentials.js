@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./FlexibleAccessCredentials.scss";
@@ -134,7 +135,13 @@ const FlexibleAccessCredentials = () => {
               </div>
 
               <div className="fac__card-image">
-                <img src={card.image} alt={card.title} loading="lazy" />
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
 
               <div className="fac__card-info">

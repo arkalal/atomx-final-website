@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { GoArrowRight } from "react-icons/go";
 import "./ExperiencesList.scss";
@@ -125,12 +126,14 @@ const ExperiencesList = () => {
             style={{ "--hover-color": item.hoverColor }}
           >
             {/* Cursor-tracking preview image */}
-            <img
+            <Image
               className="experiences-preview-img"
               ref={(el) => (imageRefs.current[idx] = el)}
               src={item.image}
               alt={item.title}
-              loading="eager"
+              width={300}
+              height={300}
+              priority
             />
 
             <div className="experiences-row-left">

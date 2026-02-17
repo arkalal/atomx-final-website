@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./EntryPainPoints.scss";
@@ -144,7 +145,13 @@ const EntryPainPoints = () => {
             <span className="ep__row-number">{item.number}</span>
 
             <div className="ep__row-image">
-              <img src={item.image} alt={item.title} loading="lazy" />
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                style={{ objectFit: "cover" }}
+              />
             </div>
 
             <div className="ep__row-content">

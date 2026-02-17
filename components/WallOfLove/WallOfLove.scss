@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .wall-of-love-content {
@@ -92,5 +94,110 @@
 
   .wall-of-love-heading {
     font-size: clamp(3.5rem, 18vw, 8rem);
+  }
+}
+
+.wol-cards-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.wol-card {
+  position: absolute;
+  width: 240px;
+  margin-left: -120px;
+  margin-top: -200px;
+  background: #d4c5ee;
+  border-radius: 10px;
+  padding: 12px 12px 0 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  cursor: grab;
+  user-select: none;
+  will-change: transform;
+  touch-action: none;
+  pointer-events: all;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.wol-card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+.wol-card-info {
+  padding: 12px 4px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wol-card-name {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.wol-card-event {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.wol-card-drag-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  pointer-events: none;
+  z-index: 20;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .wol-card {
+    width: 180px;
+    margin-left: -90px;
+    margin-top: -160px;
+    padding: 8px 8px 0 8px;
+    border-radius: 8px;
+  }
+
+  .wol-card-name {
+    font-size: 0.72rem;
+  }
+
+  .wol-card-event {
+    font-size: 0.65rem;
+  }
+
+  .wol-card-drag-badge {
+    font-size: 0.65rem;
+    padding: 6px 14px;
   }
 }

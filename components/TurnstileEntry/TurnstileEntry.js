@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./TurnstileEntry.scss";
@@ -177,14 +178,15 @@ const TurnstileEntry = () => {
                 top: `${imgData.startY}%`,
               }}
             >
-              <img
+              <Image
                 src={imgData.src}
                 alt=""
-                loading="eager"
+                fill
+                sizes="(max-width: 768px) 50vw, 200px"
                 style={{
-                  width: "100%",
-                  height: imgData.height,
+                  objectFit: "cover",
                 }}
+                priority
               />
             </div>
           ))}

@@ -107,11 +107,8 @@
   z-index: 2;
   overflow: hidden;
   will-change: transform;
-
-  img {
-    display: block;
-    object-fit: cover;
-  }
+  width: calc(100% / 6);
+  height: 280px;
 }
 
 .te__float-img--col1 {
@@ -227,8 +224,6 @@
   }
 
   .te__float-img {
-    img {
-      height: 180px !important;
-    }
+    height: 180px;
   }
 }

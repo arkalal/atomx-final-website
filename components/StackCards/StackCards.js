@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./StackCards.scss";
@@ -114,11 +115,14 @@ const StackCards = () => {
             style={{ zIndex: idx + 1 }}
           >
             <div className="stack-card-inner">
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
                 className="stack-card-image"
-                loading="eager"
+                fill
+                sizes="100vw"
+                style={{ objectFit: "cover" }}
+                priority
               />
               <div className="stack-card-overlay" />
               <div className="stack-card-dim" />

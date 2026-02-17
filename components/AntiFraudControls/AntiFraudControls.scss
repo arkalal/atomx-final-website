@@ -44,14 +44,12 @@
   display: inline-block;
   vertical-align: middle;
   margin: 0 0.15em;
+  position: relative;
+  width: clamp(60px, 8vw, 100px);
+  height: clamp(40px, 5vw, 65px);
 
   img {
-    display: inline-block;
-    width: clamp(60px, 8vw, 100px);
-    height: clamp(40px, 5vw, 65px);
-    object-fit: cover;
     border-radius: 6px;
-    vertical-align: middle;
   }
 }
 
@@ -67,10 +65,13 @@
     font-size: clamp(1.5rem, 6vw, 2.4rem);
   }
 
-  .afc__word--img img {
+  .afc__word--img {
     width: 55px;
     height: 36px;
-    border-radius: 4px;
+
+    img {
+      border-radius: 4px;
+    }
   }
 }
 
@@ -83,7 +84,7 @@
     font-size: clamp(1.3rem, 7vw, 1.8rem);
   }
 
-  .afc__word--img img {
+  .afc__word--img {
     width: 45px;
     height: 30px;
   }

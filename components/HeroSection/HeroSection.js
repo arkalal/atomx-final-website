@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect, useState } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
@@ -101,7 +102,16 @@ const HeroSection = () => {
             </div>
 
             <div className="hero-nav-center">
-              <span className="hero-nav-brand">atomX</span>
+              <div className="hero-nav-logo">
+                <Image
+                  src="/assets/logo/atomXLogo.png"
+                  alt="AtomX Logo"
+                  width={200}
+                  height={65}
+                  priority
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             </div>
 
             <div className="hero-nav-right">

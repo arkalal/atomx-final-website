@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
@@ -134,7 +135,13 @@ const RealTimeEntry = () => {
                 ref={(el) => (cardRefs.current[i] = el)}
               >
                 <div className="rte__card-image">
-                  <img src={card.image} alt={card.title} loading="lazy" />
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
                 <h3 className="rte__card-title">{card.title}</h3>
                 <p className="rte__card-desc">{card.description}</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ImageBoxes.scss";
@@ -181,10 +182,13 @@ const ImageBoxes = () => {
       <div className="image-boxes-layout">
         {/* Small left card - overlapping center */}
         <div className="image-box image-box--small-left" ref={leftRef}>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=500&fit=crop&q=80"
             alt="Event crowd"
-            loading="eager"
+            fill
+            sizes="(max-width: 768px) 200px, 400px"
+            style={{ objectFit: "cover" }}
+            priority
           />
         </div>
 
@@ -201,10 +205,13 @@ const ImageBoxes = () => {
 
         {/* Small right card - overlapping center */}
         <div className="image-box image-box--small-right" ref={rightRef}>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=500&fit=crop&q=80"
             alt="Live event"
-            loading="eager"
+            fill
+            sizes="(max-width: 768px) 200px, 400px"
+            style={{ objectFit: "cover" }}
+            priority
           />
         </div>
 

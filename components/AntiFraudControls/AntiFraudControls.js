@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./AntiFraudControls.scss";
@@ -50,7 +51,13 @@ const AntiFraudControls = () => {
           <span className="afc__word">Anti-fraud</span>{" "}
           <span className="afc__word">controls</span>{" "}
           <span className="afc__word afc__word--img">
-            <img src={inlineImages[0]} alt="" />
+            <Image
+              src={inlineImages[0]}
+              alt=""
+              fill
+              sizes="80px"
+              style={{ objectFit: "cover" }}
+            />
           </span>{" "}
           <span className="afc__word">keep</span>{" "}
           <span className="afc__word">entry</span>{" "}
@@ -58,7 +65,13 @@ const AntiFraudControls = () => {
           <span className="afc__word">without</span>{" "}
           <span className="afc__word">slowing</span>{" "}
           <span className="afc__word afc__word--img">
-            <img src={inlineImages[1]} alt="" />
+            <Image
+              src={inlineImages[1]}
+              alt=""
+              fill
+              sizes="80px"
+              style={{ objectFit: "cover" }}
+            />
           </span>{" "}
           <span className="afc__word">it</span>{" "}
           <span className="afc__word">down.</span>{" "}
@@ -66,7 +79,13 @@ const AntiFraudControls = () => {
           <span className="afc__word">control</span>{" "}
           <span className="afc__word">systems</span>{" "}
           <span className="afc__word afc__word--img">
-            <img src={inlineImages[2]} alt="" />
+            <Image
+              src={inlineImages[2]}
+              alt=""
+              fill
+              sizes="80px"
+              style={{ objectFit: "cover" }}
+            />
           </span>{" "}
           <span className="afc__word">are</span>{" "}
           <span className="afc__word">designed</span>{" "}
@@ -77,7 +96,13 @@ const AntiFraudControls = () => {
           <span className="afc__word">event</span>{" "}
           <span className="afc__word">entry</span>{" "}
           <span className="afc__word afc__word--img">
-            <img src={inlineImages[3]} alt="" />
+            <Image
+              src={inlineImages[3]}
+              alt=""
+              fill
+              sizes="80px"
+              style={{ objectFit: "cover" }}
+            />
           </span>{" "}
           <span className="afc__word">points.</span>{" "}
           <span className="afc__word">Each</span>{" "}

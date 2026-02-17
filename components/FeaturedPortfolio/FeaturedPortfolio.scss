@@ -1,0 +1,158 @@
+.featured-portfolio {
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a0a;
+  overflow: hidden;
+  padding-top: 5rem;
+}
+
+.fp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem 3.5rem;
+}
+
+.fp-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.8vw, 2.4rem);
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.fp-see-all {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 0.65rem 1.6rem;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: #252525;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.fp-see-all-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #e0524f;
+  flex-shrink: 0;
+}
+
+.fp-track {
+  display: flex;
+  gap: 2rem;
+  padding: 0 4rem;
+  padding-left: calc(50vw - 240px);
+  will-change: transform;
+}
+
+.fp-card {
+  flex-shrink: 0;
+  width: 480px;
+}
+
+.fp-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1a1a1a;
+
+  img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.fp-card-info {
+  padding: 1.1rem 0.4rem 0;
+}
+
+.fp-card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.fp-card-category {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .fp-header {
+    padding: 0 2.5rem 2.5rem;
+  }
+
+  .fp-track {
+    padding: 0 2.5rem;
+    padding-left: calc(50vw - 190px);
+    gap: 1.5rem;
+  }
+
+  .fp-card {
+    width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-portfolio {
+    padding-top: 3.5rem;
+  }
+
+  .fp-header {
+    padding: 0 1.5rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .fp-track {
+    padding: 0 1.5rem;
+    padding-left: calc(50vw - 140px);
+    gap: 1.2rem;
+  }
+
+  .fp-card {
+    width: 280px;
+  }
+
+  .fp-card-image {
+    border-radius: 12px;
+  }
+
+  .fp-card-title {
+    font-size: 1.1rem;
+  }
+
+  .fp-card-category {
+    font-size: 0.72rem;
+  }
+}

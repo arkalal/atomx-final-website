@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoArrowUpRight } from "react-icons/go";
@@ -145,10 +146,13 @@ const TestimonialReveal = () => {
       <div className="testimonial-reveal-inner" ref={innerRef}>
         {/* Left image */}
         <div className="testimonial-img testimonial-img-left" ref={leftImgRef}>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=1000&fit=crop"
             alt="Team collaboration"
-            loading="eager"
+            fill
+            sizes="(max-width: 768px) 300px, 500px"
+            style={{ objectFit: "cover" }}
+            priority
           />
         </div>
 
@@ -157,10 +161,13 @@ const TestimonialReveal = () => {
           className="testimonial-img testimonial-img-right"
           ref={rightImgRef}
         >
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=1000&fit=crop"
             alt="Team working"
-            loading="eager"
+            fill
+            sizes="(max-width: 768px) 300px, 500px"
+            style={{ objectFit: "cover" }}
+            priority
           />
         </div>
 

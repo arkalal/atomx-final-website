@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./AccessControlHero.scss";
@@ -80,11 +81,14 @@ const AccessControlHero = () => {
       </h1>
 
       <div className="ac-hero__image-wrap" ref={imageWrapRef}>
-        <img
+        <Image
           src="/assets/access-control/0V5A7084.jpeg"
           alt="Access Control Systems"
           className="ac-hero__image"
-          loading="eager"
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+          priority
         />
         <div className="ac-hero__image-overlay" ref={overlayRef} />
 

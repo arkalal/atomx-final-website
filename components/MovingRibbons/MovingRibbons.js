@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import "./MovingRibbons.scss";
 
 const ribbonData = [
@@ -99,7 +100,13 @@ const MovingRibbons = () => {
                 </span>
               ) : (
                 <div key={i} className="ribbon-image">
-                  <img src={item.src} alt="" loading="lazy" />
+                  <Image
+                    src={item.src}
+                    alt=""
+                    width={80}
+                    height={80}
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
               ),
             )}
