@@ -138,22 +138,12 @@ const ImageBoxes = () => {
     <section className="image-boxes-section" ref={sectionRef}>
       {/* Decorative star - top left */}
       <div className="image-boxes-star image-boxes-star--top" ref={starTopRef}>
-        <svg
-          width="80"
-          height="80"
-          viewBox="0 0 80 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M40 0L42.5 37.5L80 40L42.5 42.5L40 80L37.5 42.5L0 40L37.5 37.5L40 0Z"
-            fill="#eb4d2b"
-          />
-          <path
-            d="M40 10L41.5 38.5L70 40L41.5 41.5L40 70L38.5 41.5L10 40L38.5 38.5L40 10Z"
-            fill="#eb4d2b"
-          />
-        </svg>
+        <Image
+          src="/assets/icons/icon1.png"
+          alt="Decorative star"
+          width={80}
+          height={80}
+        />
       </div>
 
       {/* Decorative star - bottom right */}
@@ -161,22 +151,12 @@ const ImageBoxes = () => {
         className="image-boxes-star image-boxes-star--bottom"
         ref={starBottomRef}
       >
-        <svg
-          width="60"
-          height="60"
-          viewBox="0 0 80 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M40 0L42.5 37.5L80 40L42.5 42.5L40 80L37.5 42.5L0 40L37.5 37.5L40 0Z"
-            fill="#eb4d2b"
-          />
-          <path
-            d="M40 10L41.5 38.5L70 40L41.5 41.5L40 70L38.5 41.5L10 40L38.5 38.5L40 10Z"
-            fill="#eb4d2b"
-          />
-        </svg>
+        <Image
+          src="/assets/icons/icon2.png"
+          alt="Decorative star"
+          width={60}
+          height={60}
+        />
       </div>
 
       <div className="image-boxes-layout">

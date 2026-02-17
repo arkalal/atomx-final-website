@@ -106,8 +106,8 @@ const HeroSection = () => {
                 <Image
                   src="/assets/logo/atomXLogo.png"
                   alt="AtomX Logo"
-                  width={200}
-                  height={65}
+                  width={280}
+                  height={85}
                   priority
                   style={{ objectFit: "contain" }}
                 />
