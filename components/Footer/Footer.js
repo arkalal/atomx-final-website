@@ -49,7 +49,7 @@ const Footer = () => {
     <footer className="site-footer" ref={sectionRef}>
       <div className="footer-content">
         <h2 className="footer-brand" ref={brandRef}>
-          atomX
+          AtomX
         </h2>
         <p className="footer-tagline" ref={taglineRef}>
           THE <strong>OFFICIAL</strong> CASHLESS PAYMENTS &amp; ACCESS CONTROL
