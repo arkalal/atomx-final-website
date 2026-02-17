@@ -1,7 +1,7 @@
 .image-boxes-section {
   width: 100%;
   background: #faf8f5;
-  padding: 6rem 4rem 8rem;
+  padding: 6rem 4rem 14rem;
   position: relative;
   overflow: hidden;
 }
@@ -48,7 +48,7 @@
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   will-change: transform, opacity;
-  border: 1px solid rgba(224, 82, 79, 0.08);
+  border: 1px solid rgba(235, 77, 43, 0.08);
 
   video,
   img {

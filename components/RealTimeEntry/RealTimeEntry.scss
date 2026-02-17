@@ -29,7 +29,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: #e0524f;
+  color: #eb4d2b;
   margin-bottom: 1rem;
 }
 
@@ -56,9 +56,9 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid rgba(224, 82, 79, 0.3);
+  border: 1px solid rgba(235, 77, 43, 0.3);
   background: transparent;
-  color: #e0524f;
+  color: #eb4d2b;
   font-size: 1.2rem;
   cursor: pointer;
   transition:
@@ -67,8 +67,8 @@
     opacity 0.3s ease;
 
   &:hover {
-    background: #e0524f;
-    border-color: #e0524f;
+    background: #eb4d2b;
+    border-color: #eb4d2b;
     color: #fff;
   }
 }

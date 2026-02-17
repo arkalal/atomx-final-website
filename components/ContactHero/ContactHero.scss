@@ -89,7 +89,7 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: #e0524f;
+  background: #eb4d2b;
   border: none;
   color: #fff;
   display: flex;
@@ -175,7 +175,7 @@
 
   svg {
     font-size: 1rem;
-    color: #e0524f;
+    color: #eb4d2b;
   }
 
   &:hover {
@@ -244,8 +244,8 @@
   }
 
   &:focus {
-    border-color: rgba(224, 82, 79, 0.4);
-    box-shadow: 0 0 0 3px rgba(224, 82, 79, 0.08);
+    border-color: rgba(235, 77, 43, 0.4);
+    box-shadow: 0 0 0 3px rgba(235, 77, 43, 0.08);
   }
 }
 
@@ -298,7 +298,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #e0524f;
+  background: #eb4d2b;
   color: #fff;
   font-size: 1.2rem;
 }

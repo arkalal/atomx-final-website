@@ -1,4 +1,4 @@
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.scss";
 
 const playfairDisplay = Playfair_Display({
@@ -8,7 +8,7 @@ const playfairDisplay = Playfair_Display({
   display: "swap",
 });
 
-const inter = Inter({
+const poppins = Poppins({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -24,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable} ${inter.variable}`}>
+      <body className={`${playfairDisplay.variable} ${poppins.variable}`}>
         {children}
       </body>
     </html>

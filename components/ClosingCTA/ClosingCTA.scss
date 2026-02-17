@@ -1,7 +1,7 @@
 .closing-cta {
   width: 100%;
   min-height: 80vh;
-  background: #0a0a0a;
+  background: #faf8f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
 .closing-cta-text {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-  color: #ffffff;
+  color: #1a1a1a;
   font-weight: 400;
   line-height: 1.45;
   margin: 0;
@@ -42,18 +42,18 @@
 }
 
 .closing-highlight--cyan {
-  background: rgba(224, 82, 79, 0.25);
-  color: #ff8a87;
+  background: rgba(235, 77, 43, 0.15);
+  color: #eb4d2b;
 }
 
 .closing-highlight--lavender {
-  background: rgba(224, 82, 79, 0.18);
-  color: #e0524f;
+  background: rgba(235, 77, 43, 0.12);
+  color: #d4432a;
 }
 
 .closing-highlight--pink {
-  background: rgba(224, 82, 79, 0.12);
-  color: #c94542;
+  background: rgba(235, 77, 43, 0.1);
+  color: #c9433f;
 }
 
 .closing-cta-btn-wrap {
@@ -64,24 +64,23 @@
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: #fff;
+  border: none;
+  color: #1a1a1a;
   padding: 0.75rem 0.75rem 0.75rem 2rem;
   border-radius: 50px;
   font-size: 1rem;
   font-family: var(--font-sans);
   font-weight: 400;
   cursor: pointer;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
   transition:
     box-shadow 0.3s ease,
     transform 0.3s ease;
 
   &:hover {
-    box-shadow: 0 4px 24px rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
     transform: scale(1.03);
-    background: rgba(255, 255, 255, 0.15);
   }
 }
 
@@ -92,7 +91,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #e0524f;
+  background: #eb4d2b;
   color: #fff;
   font-size: 1.2rem;
 }

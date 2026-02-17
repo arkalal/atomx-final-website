@@ -110,7 +110,7 @@ const TurnstileEntry = () => {
       masterTl.to(
         dotRef.current,
         {
-          backgroundColor: "#e0524f",
+          backgroundColor: "#eb4d2b",
           ease: "power1.inOut",
           duration: 0.3,
         },

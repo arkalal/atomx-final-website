@@ -147,11 +147,11 @@ const ImageBoxes = () => {
         >
           <path
             d="M40 0L42.5 37.5L80 40L42.5 42.5L40 80L37.5 42.5L0 40L37.5 37.5L40 0Z"
-            fill="#e0524f"
+            fill="#eb4d2b"
           />
           <path
             d="M40 10L41.5 38.5L70 40L41.5 41.5L40 70L38.5 41.5L10 40L38.5 38.5L40 10Z"
-            fill="#e0524f"
+            fill="#eb4d2b"
           />
         </svg>
       </div>
@@ -170,11 +170,11 @@ const ImageBoxes = () => {
         >
           <path
             d="M40 0L42.5 37.5L80 40L42.5 42.5L40 80L37.5 42.5L0 40L37.5 37.5L40 0Z"
-            fill="#e0524f"
+            fill="#eb4d2b"
           />
           <path
             d="M40 10L41.5 38.5L70 40L41.5 41.5L40 70L38.5 41.5L10 40L38.5 38.5L40 10Z"
-            fill="#e0524f"
+            fill="#eb4d2b"
           />
         </svg>
       </div>
