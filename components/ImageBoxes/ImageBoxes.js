@@ -170,6 +170,10 @@ const ImageBoxes = () => {
             style={{ objectFit: "cover" }}
             priority
           />
+          <div className="image-box-hover-text">
+            <span>CASHLESS</span>
+            <span>PAYMENTS</span>
+          </div>
         </div>
 
         {/* Large center card - tall and narrower */}
@@ -193,6 +197,10 @@ const ImageBoxes = () => {
             style={{ objectFit: "cover" }}
             priority
           />
+          <div className="image-box-hover-text">
+            <span>TAP</span>
+            <span>X</span>
+          </div>
         </div>
 
         {/* Small bottom center card - overlapping center bottom */}
@@ -204,6 +212,10 @@ const ImageBoxes = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
+          <div className="image-box-hover-text">
+            <span>ACCESS</span>
+            <span>CONTROL</span>
+          </div>
         </div>
       </div>
     </section>

@@ -136,7 +136,7 @@ const ExploreSection = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span>Explore Products</span>
+          <span className="explore-cta-text">Explore Products</span>
           <span className="explore-cta-arrow">
             <GoArrowUpRight />
           </span>

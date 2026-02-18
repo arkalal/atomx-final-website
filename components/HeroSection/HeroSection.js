@@ -156,7 +156,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <span>View Services</span>
+                <span className="hero-cta-text">View Services</span>
                 <span className="hero-cta-arrow">
                   <GoArrowUpRight />
                 </span>

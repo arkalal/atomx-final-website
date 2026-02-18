@@ -181,7 +181,9 @@ const WallOfLove = () => {
         </h2>
         <div className="wall-of-love-cta" ref={ctaRef}>
           <button className="wall-of-love-btn">
-            <span>Make Your Event Seamless</span>
+            <span className="wall-of-love-btn-text">
+              Make Your Event Seamless
+            </span>
             <span className="wall-of-love-btn-arrow">
               <GoArrowUpRight />
             </span>

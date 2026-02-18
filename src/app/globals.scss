@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/chillax");
+
 *,
 *::before,
 *::after {
@@ -7,7 +9,7 @@
 }
 
 :root {
-  --font-display: inherit;
+  --font-display: "Chillax", sans-serif;
   --font-sans: inherit;
 }
 

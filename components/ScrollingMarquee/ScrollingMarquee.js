@@ -1,21 +1,18 @@
 import React from "react";
-import {
-  HiOutlineLightningBolt,
-  HiOutlineChip,
-  HiOutlineGlobe,
-  HiOutlineSparkles,
-} from "react-icons/hi";
+import Image from "next/image";
 import "./ScrollingMarquee.scss";
 
-const marqueeItems = [
-  { type: "text", content: "Discover", highlight: "atomX" },
-  { type: "icon", icon: HiOutlineLightningBolt },
-  { type: "text", content: "Discover", highlight: "atomX" },
-  { type: "icon", icon: HiOutlineChip },
-  { type: "text", content: "Discover", highlight: "atomX" },
-  { type: "icon", icon: HiOutlineGlobe },
-  { type: "text", content: "Discover", highlight: "atomX" },
-  { type: "icon", icon: HiOutlineSparkles },
+const eventLogos = [
+  { src: "/assets/event-logos/1.png", alt: "Event Partner 1" },
+  { src: "/assets/event-logos/2.png", alt: "Event Partner 2" },
+  { src: "/assets/event-logos/3.png", alt: "Event Partner 3" },
+  { src: "/assets/event-logos/4.png", alt: "Event Partner 4" },
+  { src: "/assets/event-logos/5.png", alt: "Event Partner 5" },
+  { src: "/assets/event-logos/6.png", alt: "Event Partner 6" },
+  { src: "/assets/event-logos/7.png", alt: "Event Partner 7" },
+  { src: "/assets/event-logos/8.png", alt: "Event Partner 8" },
+  { src: "/assets/event-logos/9.png", alt: "Event Partner 9" },
+  { src: "/assets/event-logos/10.png", alt: "Event Partner 10" },
 ];
 
 const ScrollingMarquee = () => {
@@ -23,18 +20,17 @@ const ScrollingMarquee = () => {
     <section className="scrolling-marquee-section">
       <div className="scrolling-marquee-track">
         {/* Duplicate content for seamless loop */}
-        {[...marqueeItems, ...marqueeItems].map((item, i) =>
-          item.type === "text" ? (
-            <span key={i} className="marquee-text">
-              {item.content}{" "}
-              <span className="marquee-text-highlight">{item.highlight}</span>
-            </span>
-          ) : (
-            <div key={i} className="marquee-icon">
-              <item.icon />
-            </div>
-          ),
-        )}
+        {[...eventLogos, ...eventLogos].map((logo, i) => (
+          <div key={i} className="marquee-logo">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={120}
+              height={60}
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

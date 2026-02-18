@@ -76,7 +76,7 @@ const ClosingCTA = () => {
         </p>
         <div className="closing-cta-btn-wrap" ref={ctaRef}>
           <button className="closing-cta-btn">
-            <span>Get Started</span>
+            <span className="closing-cta-btn-text">Get Started</span>
             <span className="closing-cta-btn-arrow">
               <GoArrowUpRight />
             </span>
