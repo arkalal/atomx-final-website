@@ -247,43 +247,42 @@
   opacity: 0;
   overflow: hidden;
   border-radius: 0;
-  background: transparent;
-  border-left: 3px solid #eb4d2b;
-  margin-top: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 77, 43, 0.06) 0%,
+    rgba(245, 166, 35, 0.1) 100%
+  );
+  border-left: 4px solid #eb4d2b;
+  margin-bottom: 0;
   will-change: max-height, opacity;
   transition:
     max-height 0.4s ease,
     opacity 0.3s ease,
-    margin-top 0.3s ease;
+    margin-bottom 0.3s ease;
 }
 
 .how-tapx-fits__right-card--active {
-  max-height: 200px;
+  max-height: 120px;
   opacity: 1;
-  margin-top: 6px;
+  margin-bottom: 8px;
 }
 
 .how-tapx-fits__right-card-inner {
-  padding: 12px 20px;
+  padding: 16px 20px;
 }
 
 .how-tapx-fits__right-title {
   font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 500;
   color: #1a1a1a;
-  line-height: 1.4;
+  line-height: 1.45;
   letter-spacing: -0.01em;
-  margin: 0 0 6px;
+  margin: 0;
 }
 
 .how-tapx-fits__right-text {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 400;
-  color: #5a4a3a;
-  line-height: 1.65;
-  margin: 0;
+  display: none;
 }
 
 .how-tapx-fits__right-label {

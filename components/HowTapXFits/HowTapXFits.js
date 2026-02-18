@@ -11,9 +11,9 @@ const stepsData = [
   {
     number: "01",
     label: "On-Ground Setup",
-    contentTitle: "Event-Ready from the Start",
-    contentText:
-      "TapX enables cashless payments at the venue through NFC-enabled wristbands or cards, ready to power cashless transactions across the event.",
+    contentTitle:
+      "Deploy NFC wristbands and cards across all venue touchpoints",
+    contentText: "",
     slideTitle: "On-Ground Setup",
     slideText:
       "TapX is active for payments across food, beverages, and merchandise zones.",
@@ -21,27 +21,25 @@ const stepsData = [
   {
     number: "02",
     label: "Attendee Experience",
-    contentTitle: "Tap. Pay. Move On.",
-    contentText:
-      "Attendees use TapX to make quick, contactless payments—no cash, no cards, no delays.",
+    contentTitle: "Tap once to complete instant contactless payments anywhere",
+    contentText: "",
     slideTitle: "Attendee Experience",
     slideText: "One tap completes a payment instantly.",
   },
   {
     number: "03",
     label: "On-Ground Operations",
-    contentTitle: "Smooth for Vendors & Staff",
-    contentText:
-      "TapX simplifies transactions for vendors, reducing queues and operational friction during peak event hours.",
+    contentTitle: "Streamline vendor transactions and reduce queue times",
+    contentText: "",
     slideTitle: "On-Ground Operations",
     slideText: "Faster service. Fewer queues.",
   },
   {
     number: "04",
     label: "Event Oversight",
-    contentTitle: "Clear Visibility for Organizers",
-    contentText:
-      "Event teams gain real-time visibility into cashless activity, helping streamline operations and decision-making.",
+    contentTitle:
+      "Monitor real-time cashless activity and make smarter decisions",
+    contentText: "",
     slideTitle: "Event Oversight",
     slideText: "Transactions synced securely within the AtomX ecosystem.",
   },
@@ -158,10 +156,10 @@ const HowTapXFits = () => {
           gsap.set(card, {
             maxHeight: cardHeights[i],
             opacity: 1,
-            marginTop: 6,
+            marginBottom: 8,
           });
         } else {
-          gsap.set(card, { maxHeight: 0, opacity: 0, marginTop: 0 });
+          gsap.set(card, { maxHeight: 0, opacity: 0, marginBottom: 0 });
         }
       });
 
@@ -237,7 +235,7 @@ const HowTapXFits = () => {
             {
               maxHeight: 0,
               opacity: 0,
-              marginTop: 0,
+              marginBottom: 0,
               duration: 0.4,
               ease: "power2.in",
             },
@@ -249,11 +247,11 @@ const HowTapXFits = () => {
         if (cards[next]) {
           tl.fromTo(
             cards[next],
-            { maxHeight: 0, opacity: 0, marginTop: 0 },
+            { maxHeight: 0, opacity: 0, marginBottom: 0 },
             {
               maxHeight: cardHeights[next],
               opacity: 1,
-              marginTop: 6,
+              marginBottom: 8,
               duration: 0.4,
               ease: "power2.out",
             },
@@ -342,7 +340,7 @@ const HowTapXFits = () => {
           </div>
         </div>
 
-        {/* RIGHT: Stacked labels + expandable content card */}
+        {/* RIGHT: Stacked cards + labels - card above, label below */}
         <div className="how-tapx-fits__right-col">
           {stepsData.map((step, i) => (
             <div
@@ -350,21 +348,18 @@ const HowTapXFits = () => {
               className="how-tapx-fits__right-item"
               ref={(el) => (rightItemsRef.current[i] = el)}
             >
-              <span className="how-tapx-fits__right-label">{step.label}</span>
               <div
                 className={`how-tapx-fits__right-card${
                   i === 0 ? " how-tapx-fits__right-card--active" : ""
                 }`}
               >
                 <div className="how-tapx-fits__right-card-inner">
-                  <h3 className="how-tapx-fits__right-title">
+                  <p className="how-tapx-fits__right-title">
                     {step.contentTitle}
-                  </h3>
-                  <p className="how-tapx-fits__right-text">
-                    {step.contentText}
                   </p>
                 </div>
               </div>
+              <span className="how-tapx-fits__right-label">{step.label}</span>
             </div>
           ))}
         </div>

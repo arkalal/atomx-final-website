@@ -53,10 +53,10 @@ const Footer = () => {
           <Image
             src="/assets/logo/AtomX white.png"
             alt="AtomX Logo"
-            width={800}
+            width={100000}
             height={500}
             priority
-            style={{ objectFit: "contain", width: "100%", height: "auto" }}
+            style={{ objectFit: "cover", width: "100%", height: "auto" }}
           />
         </div>
         <p className="footer-tagline" ref={taglineRef}>
