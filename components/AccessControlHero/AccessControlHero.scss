@@ -19,16 +19,13 @@
 
   font-family: var(--font-display);
   font-size: clamp(6.5rem, 11.5vw, 16rem);
-  font-weight: bolder;
+  font-weight: 900;
 
   line-height: 0.85;
   letter-spacing: -0.06em;
 
-  color: transparent;
-  background: linear-gradient(180deg, #c4b5a4 0%, #a89888 35%, #eb4d2b 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #eb4d2b;
+  -webkit-text-fill-color: #eb4d2b;
 
   text-align: center;
   white-space: nowrap;
@@ -99,7 +96,7 @@
 .ac-hero__subline {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 700;
   color: #ffffff;
   line-height: 1.3;
   letter-spacing: -0.01em;

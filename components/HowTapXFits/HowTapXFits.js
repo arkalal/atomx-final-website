@@ -158,10 +158,10 @@ const HowTapXFits = () => {
           gsap.set(card, {
             maxHeight: cardHeights[i],
             opacity: 1,
-            marginBottom: 4,
+            marginTop: 6,
           });
         } else {
-          gsap.set(card, { maxHeight: 0, opacity: 0, marginBottom: 0 });
+          gsap.set(card, { maxHeight: 0, opacity: 0, marginTop: 0 });
         }
       });
 
@@ -237,7 +237,7 @@ const HowTapXFits = () => {
             {
               maxHeight: 0,
               opacity: 0,
-              marginBottom: 0,
+              marginTop: 0,
               duration: 0.4,
               ease: "power2.in",
             },
@@ -249,11 +249,11 @@ const HowTapXFits = () => {
         if (cards[next]) {
           tl.fromTo(
             cards[next],
-            { maxHeight: 0, opacity: 0, marginBottom: 0 },
+            { maxHeight: 0, opacity: 0, marginTop: 0 },
             {
               maxHeight: cardHeights[next],
               opacity: 1,
-              marginBottom: 4,
+              marginTop: 6,
               duration: 0.4,
               ease: "power2.out",
             },
@@ -350,6 +350,7 @@ const HowTapXFits = () => {
               className="how-tapx-fits__right-item"
               ref={(el) => (rightItemsRef.current[i] = el)}
             >
+              <span className="how-tapx-fits__right-label">{step.label}</span>
               <div
                 className={`how-tapx-fits__right-card${
                   i === 0 ? " how-tapx-fits__right-card--active" : ""
@@ -364,7 +365,6 @@ const HowTapXFits = () => {
                   </p>
                 </div>
               </div>
-              <span className="how-tapx-fits__right-label">{step.label}</span>
             </div>
           ))}
         </div>

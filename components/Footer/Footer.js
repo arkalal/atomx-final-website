@@ -2,6 +2,7 @@
 
 import React, { useRef, useLayoutEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Footer.scss";
@@ -48,9 +49,16 @@ const Footer = () => {
   return (
     <footer className="site-footer" ref={sectionRef}>
       <div className="footer-content">
-        <h2 className="footer-brand" ref={brandRef}>
-          AtomX
-        </h2>
+        <div className="footer-brand" ref={brandRef}>
+          <Image
+            src="/assets/logo/AtomX white.png"
+            alt="AtomX Logo"
+            width={800}
+            height={500}
+            priority
+            style={{ objectFit: "contain", width: "100%", height: "auto" }}
+          />
+        </div>
         <p className="footer-tagline" ref={taglineRef}>
           THE <strong>OFFICIAL</strong> CASHLESS PAYMENTS &amp; ACCESS CONTROL
           PLATFORM FOR LIVE EVENTS

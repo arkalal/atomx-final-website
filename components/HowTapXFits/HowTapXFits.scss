@@ -2,10 +2,8 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #ffffff;
-  overflow: visible;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  background: #faf8f5;
+  overflow: hidden;
 }
 
 /* ============================================
@@ -30,9 +28,7 @@
 }
 
 /* ============================================
-   MAIN LAYOUT: NUMBER | PHONE | CONTENT
-   Uses flex:1 on side columns so the phone
-   is always truly centred horizontally.
+   MAIN LAYOUT: Absolute positioning for true center
    ============================================ */
 .how-tapx-fits__layout {
   position: absolute;
@@ -40,29 +36,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  padding: 20vh 3% 10vh;
   z-index: 4;
 }
 
 /* ============================================
-   LEFT: STEP NUMBER  —  flex:1, push content left
+   LEFT: STEP NUMBER — fixed left position
    ============================================ */
 .how-tapx-fits__number-col {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .how-tapx-fits__number-wrap {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
 
 .how-tapx-fits__number {
@@ -71,10 +61,10 @@
   left: 0;
   width: 100%;
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 5vw, 5.5rem);
+  font-size: clamp(4.5rem, 7vw, 7rem);
   font-weight: 700;
   color: #eb4d2b;
-  line-height: 100px;
+  line-height: 120px;
   text-align: left;
   letter-spacing: -0.02em;
   will-change: transform, opacity;
@@ -86,14 +76,13 @@
 }
 
 /* ============================================
-   CENTER: PHONE MOCKUP  —  flex:0 0 auto (true center)
+   CENTER: PHONE MOCKUP — true center of viewport
    ============================================ */
 .how-tapx-fits__phone-col {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .how-tapx-fits__phone {
@@ -185,7 +174,7 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background: #d35400;
+  background: #eb4d2b;
   border-radius: 3px;
 }
 
@@ -198,7 +187,7 @@
   width: 80px;
   height: 80px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #f5a623 0%, #d35400 100%);
+  background: linear-gradient(135deg, #f5a623 0%, #eb4d2b 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,17 +224,17 @@
 
 /* ============================================
    RIGHT: STACKED LABELS + EXPANDABLE CARDS
-   flex:1, content pushed to the right edge.
-   Cards hidden by default via CSS, only the
-   active card is expanded via GSAP.
+   Fixed position to the right of phone
    ============================================ */
 .how-tapx-fits__right-col {
-  flex: 1;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding-left: 48px;
-  align-self: center;
+  width: 320px;
 }
 
 .how-tapx-fits__right-item {
@@ -257,31 +246,35 @@
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  border-radius: 14px;
-  background: #f7f4f1;
-  box-shadow: none;
-  margin-bottom: 0;
+  border-radius: 0;
+  background: transparent;
+  border-left: 3px solid #eb4d2b;
+  margin-top: 0;
   will-change: max-height, opacity;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
 }
 
 .how-tapx-fits__right-card--active {
-  max-height: 300px;
+  max-height: 200px;
   opacity: 1;
-  margin-bottom: 4px;
+  margin-top: 6px;
 }
 
 .how-tapx-fits__right-card-inner {
-  padding: 22px 24px;
+  padding: 12px 20px;
 }
 
 .how-tapx-fits__right-title {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #1a0a00;
-  line-height: 1.35;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
   letter-spacing: -0.01em;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
 }
 
 .how-tapx-fits__right-text {
@@ -295,20 +288,20 @@
 
 .how-tapx-fits__right-label {
   font-family: var(--font-sans);
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #d35400;
-  padding: 12px 0;
+  color: #eb4d2b;
+  padding: 10px 0;
   cursor: default;
   letter-spacing: 0.01em;
 }
 
 /* ============================================
-   CTA BUTTON
+   CTA BUTTON — centered below phone
    ============================================ */
 .how-tapx-fits__cta-wrap {
   position: absolute;
-  bottom: 2vh;
+  bottom: 8vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -319,7 +312,7 @@
   align-items: center;
   gap: 10px;
   padding: 16px 36px;
-  background: #d35400;
+  background: #eb4d2b;
   color: #fff;
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -333,13 +326,13 @@
     background 0.3s ease,
     transform 0.2s ease,
     box-shadow 0.3s ease;
-  box-shadow: 0 6px 30px rgba(211, 84, 0, 0.3);
+  box-shadow: 0 6px 30px rgba(235, 77, 43, 0.3);
 }
 
 .how-tapx-fits__cta:hover {
-  background: #b94700;
+  background: #d43d1b;
   transform: translateY(-2px);
-  box-shadow: 0 10px 40px rgba(211, 84, 0, 0.4);
+  box-shadow: 0 10px 40px rgba(235, 77, 43, 0.4);
 }
 
 .how-tapx-fits__cta svg {
@@ -362,7 +355,7 @@
   }
 
   .how-tapx-fits__right-col {
-    padding-left: 32px;
+    padding-left: 50px;
   }
 }
 
@@ -462,7 +455,7 @@
   }
 
   .how-tapx-fits__cta-wrap {
-    bottom: 2vh;
+    display: none;
   }
 
   .how-tapx-fits__cta {

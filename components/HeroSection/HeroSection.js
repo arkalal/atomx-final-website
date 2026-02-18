@@ -104,10 +104,10 @@ const HeroSection = () => {
             <div className="hero-nav-center">
               <div className="hero-nav-logo">
                 <Image
-                  src="/assets/logo/atomXLogo.png"
+                  src="/assets/logo/AtomX orange.png"
                   alt="AtomX Logo"
-                  width={280}
-                  height={85}
+                  width={400}
+                  height={300}
                   priority
                   style={{ objectFit: "contain" }}
                 />
