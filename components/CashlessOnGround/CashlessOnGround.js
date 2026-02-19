@@ -79,7 +79,7 @@ const CashlessOnGround = () => {
             start: "top 75%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -96,7 +96,7 @@ const CashlessOnGround = () => {
             start: "top 75%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -113,7 +113,7 @@ const CashlessOnGround = () => {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       itemRefs.current.filter(Boolean).forEach((item, i) => {
@@ -131,7 +131,7 @@ const CashlessOnGround = () => {
               start: "top 88%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
     }, sectionRef);
@@ -216,7 +216,7 @@ const CashlessOnGround = () => {
 
         <div className="clog__cta-wrap">
           <Link href="#" className="clog__cta-btn">
-            <span>Explore POSX Device</span>
+            <span className="clog__cta-text">Explore POSX Device</span>
             <span className="clog__cta-icon">
               <GoArrowUpRight />
             </span>

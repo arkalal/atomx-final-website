@@ -31,7 +31,7 @@ const AboutCTA = () => {
             start: "top 65%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     }, sectionRef);
 
@@ -53,7 +53,7 @@ const AboutCTA = () => {
         </p>
         <div className="about-cta__btn-wrap">
           <Link href="/contact" className="about-cta__btn">
-            <span>Contact Us</span>
+            <span className="about-cta__btn-text">Contact Us</span>
             <span className="about-cta__btn-icon">
               <GoArrowUpRight />
             </span>

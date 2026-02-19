@@ -63,7 +63,7 @@ const CashlessHowItWorks = () => {
             start: "top 75%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       cardsRef.current.filter(Boolean).forEach((card, i) => {
@@ -81,7 +81,7 @@ const CashlessHowItWorks = () => {
               start: "top 85%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
     }, sectionRef);
@@ -103,7 +103,7 @@ const CashlessHowItWorks = () => {
           </p>
           <div className="clhw__cta-group">
             <Link href="/contact" className="clhw__cta-btn">
-              <span>Explore Services</span>
+              <span className="clhw__cta-text">Explore Services</span>
               <span className="clhw__cta-icon">
                 <GoArrowUpRight />
               </span>

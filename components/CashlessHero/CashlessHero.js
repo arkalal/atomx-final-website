@@ -176,7 +176,7 @@ const CashlessHero = () => {
         </p>
         <div className="clh__cta-row">
           <Link href="/contact" className="clh__cta-btn">
-            <span>Make Your Event Seamless</span>
+            <span className="clh__cta-text">Make Your Event Seamless</span>
             <span className="clh__cta-icon">
               <GoArrowUpRight />
             </span>

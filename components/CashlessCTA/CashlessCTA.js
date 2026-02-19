@@ -31,7 +31,7 @@ const CashlessCTA = () => {
             start: "top 65%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     }, sectionRef);
 
@@ -53,7 +53,7 @@ const CashlessCTA = () => {
         </p>
         <div className="clcta__btn-wrap">
           <Link href="/contact" className="clcta__btn">
-            <span>Get in Touch</span>
+            <span className="clcta__btn-text">Get in Touch</span>
             <span className="clcta__btn-icon">
               <GoArrowUpRight />
             </span>

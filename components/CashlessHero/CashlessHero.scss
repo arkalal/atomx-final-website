@@ -91,10 +91,11 @@
 }
 
 .clh__cta-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  background: linear-gradient(135deg, #f97316, #ef4444, #ec4899);
+  background: #eb4d2b;
   color: #ffffff;
   padding: 0.85rem 0.85rem 0.85rem 2rem;
   border-radius: 50px;
@@ -102,18 +103,30 @@
   font-family: var(--font-sans);
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 30px rgba(249, 115, 22, 0.35);
-  transition:
-    box-shadow 0.35s ease,
-    transform 0.35s ease;
+  box-shadow: 0 4px 30px rgba(235, 77, 43, 0.35);
+  transition: box-shadow 0.35s ease;
+  overflow: hidden;
 
   &:hover {
-    box-shadow: 0 6px 40px rgba(249, 115, 22, 0.5);
-    transform: scale(1.04);
+    box-shadow: 0 6px 40px rgba(235, 77, 43, 0.5);
+
+    .clh__cta-icon {
+      transform: translateX(-125px);
+    }
+
+    .clh__cta-text {
+      transform: translateX(50px);
+    }
   }
 }
 
+.clh__cta-text {
+  order: 1;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 .clh__cta-icon {
+  order: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,6 +136,8 @@
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .clh__play-btn-hero {
@@ -176,6 +191,7 @@
   text-align: center;
   pointer-events: none;
   will-change: transform, opacity;
+  opacity: 0;
 }
 
 .clh__showreel-title {
@@ -214,6 +230,7 @@
   max-height: 65vh;
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
   will-change: width, transform, opacity;
+  opacity: 0;
 }
 
 .clh__video-card {

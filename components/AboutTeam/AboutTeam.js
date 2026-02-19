@@ -137,6 +137,11 @@ const AboutTeam = () => {
 
   return (
     <section className="about-team" ref={sectionRef}>
+      <div className="about-team__grid-lines">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className="about-team__col-line" />
+        ))}
+      </div>
       <div className="about-team__inner">
         <p className="about-team__quote" ref={quoteRef}>
           {quoteText.split(" ").map((word, i) => (
