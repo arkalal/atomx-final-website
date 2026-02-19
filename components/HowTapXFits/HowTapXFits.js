@@ -126,13 +126,18 @@ const HowTapXFits = () => {
       const cards = rightItems.map((item) =>
         item.querySelector(".how-tapx-fits__right-card"),
       );
+      const collapsedLabels = rightItems.map((item) =>
+        item.querySelector(".how-tapx-fits__right-label"),
+      );
       const cardHeights = cards.map((card) => {
         if (!card) return 0;
         card.style.maxHeight = "none";
         card.style.opacity = "1";
+        card.style.padding = "20px 22px";
         const h = card.scrollHeight;
         card.style.maxHeight = "";
         card.style.opacity = "";
+        card.style.padding = "";
         return h;
       });
 
@@ -156,10 +161,18 @@ const HowTapXFits = () => {
           gsap.set(card, {
             maxHeight: cardHeights[i],
             opacity: 1,
-            marginBottom: 8,
+            padding: "20px 22px",
           });
+          // Hide collapsed label for first item
+          if (collapsedLabels[i]) {
+            gsap.set(collapsedLabels[i], { display: "none" });
+          }
         } else {
-          gsap.set(card, { maxHeight: 0, opacity: 0, marginBottom: 0 });
+          gsap.set(card, { maxHeight: 0, opacity: 0, padding: 0 });
+          // Show collapsed label for other items
+          if (collapsedLabels[i]) {
+            gsap.set(collapsedLabels[i], { display: "block" });
+          }
         }
       });
 
@@ -168,6 +181,23 @@ const HowTapXFits = () => {
         ".how-tapx-fits__phone-progress-fill",
       );
       if (firstFill) gsap.set(firstFill, { width: "100%" });
+
+      // Track current active step for label management
+      let currentStep = 0;
+
+      // Function to update collapsed labels based on active step
+      const updateCollapsedLabels = (activeIdx) => {
+        collapsedLabels.forEach((label, i) => {
+          if (!label) return;
+          if (i === activeIdx) {
+            // Hide collapsed label for active card
+            gsap.set(label, { display: "none" });
+          } else {
+            // Show collapsed label for inactive cards
+            gsap.set(label, { display: "block" });
+          }
+        });
+      };
 
       // --- Master pinned timeline ---
       const tl = gsap.timeline({
@@ -179,6 +209,18 @@ const HowTapXFits = () => {
           scrub: 0.5,
           pinSpacing: true,
           anticipatePin: 1,
+          onUpdate: (self) => {
+            // Calculate which step we're on based on progress
+            const progress = self.progress;
+            const stepProgress = progress * (totalSteps - 1);
+            const newStep = Math.round(stepProgress);
+            const clampedStep = Math.max(0, Math.min(totalSteps - 1, newStep));
+
+            if (clampedStep !== currentStep) {
+              currentStep = clampedStep;
+              updateCollapsedLabels(currentStep);
+            }
+          },
         },
       });
 
@@ -228,14 +270,14 @@ const HowTapXFits = () => {
           );
         }
 
-        // Right card: collapse current
+        // Right card: collapse current (animates down and fades)
         if (cards[i]) {
           tl.to(
             cards[i],
             {
               maxHeight: 0,
               opacity: 0,
-              marginBottom: 0,
+              padding: 0,
               duration: 0.4,
               ease: "power2.in",
             },
@@ -243,15 +285,15 @@ const HowTapXFits = () => {
           );
         }
 
-        // Right card: expand next
+        // Right card: expand next (animates up and fades in)
         if (cards[next]) {
           tl.fromTo(
             cards[next],
-            { maxHeight: 0, opacity: 0, marginBottom: 0 },
+            { maxHeight: 0, opacity: 0, padding: 0 },
             {
               maxHeight: cardHeights[next],
               opacity: 1,
-              marginBottom: 8,
+              padding: "20px 22px",
               duration: 0.4,
               ease: "power2.out",
             },
@@ -340,26 +382,37 @@ const HowTapXFits = () => {
           </div>
         </div>
 
-        {/* RIGHT: Stacked cards + labels - card above, label below */}
+        {/* RIGHT: Cards with content + label inside */}
         <div className="how-tapx-fits__right-col">
           {stepsData.map((step, i) => (
             <div
               key={step.number}
-              className="how-tapx-fits__right-item"
+              className={`how-tapx-fits__right-item${
+                i === 0 ? " how-tapx-fits__right-item--active" : ""
+              }`}
               ref={(el) => (rightItemsRef.current[i] = el)}
             >
+              {/* Card with content + label inside */}
               <div
                 className={`how-tapx-fits__right-card${
                   i === 0 ? " how-tapx-fits__right-card--active" : ""
                 }`}
               >
-                <div className="how-tapx-fits__right-card-inner">
-                  <p className="how-tapx-fits__right-title">
-                    {step.contentTitle}
-                  </p>
-                </div>
+                <p className="how-tapx-fits__right-content">
+                  {step.contentTitle}
+                </p>
+                <span className="how-tapx-fits__right-label-inside">
+                  {step.label}
+                </span>
               </div>
-              <span className="how-tapx-fits__right-label">{step.label}</span>
+              {/* Collapsed label (shown when card is collapsed) */}
+              <span
+                className={`how-tapx-fits__right-label${
+                  i === 0 ? " how-tapx-fits__right-label--hidden" : ""
+                }`}
+              >
+                {step.label}
+              </span>
             </div>
           ))}
         </div>

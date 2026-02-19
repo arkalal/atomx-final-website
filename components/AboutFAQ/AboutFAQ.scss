@@ -1,0 +1,161 @@
+/* ============================================
+   ABOUT FAQ — Dark Accordion (same style as AC FAQ)
+   ============================================ */
+.about-faq {
+  width: 100%;
+  background: #faf8f5;
+  padding: 6rem 2rem 7rem;
+  overflow: hidden;
+}
+
+.about-faq__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.about-faq__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.about-faq__eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #eb4d2b;
+  margin-bottom: 1.2rem;
+}
+
+.about-faq__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* ---------- FAQ List ---------- */
+.about-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-faq__item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease;
+
+  &:hover {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+.about-faq__item--active {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.about-faq__question-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 1.6rem;
+  gap: 1rem;
+}
+
+.about-faq__question {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  color: #1a1a1a;
+  font-weight: 500;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.about-faq__chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.about-faq__item--active .about-faq__chevron {
+  color: #eb4d2b;
+}
+
+/* ---------- Answer panel ---------- */
+.about-faq__answer-wrap {
+  overflow: hidden;
+}
+
+.about-faq__answer {
+  padding: 0 1.6rem 1.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: #666666;
+  line-height: 1.7;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .about-faq {
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .about-faq__heading {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .about-faq__question-bar {
+    padding: 1.1rem 1.2rem;
+  }
+
+  .about-faq__question {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+
+  .about-faq__answer {
+    padding: 0 1.2rem 1.2rem;
+    max-width: 100%;
+    font-size: 0.84rem;
+  }
+
+  .about-faq__item {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-faq__heading {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+
+  .about-faq__chevron {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 1rem;
+  }
+}

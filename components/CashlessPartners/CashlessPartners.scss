@@ -1,0 +1,121 @@
+.clp-partners {
+  position: relative;
+  width: 100%;
+  background: #000;
+  padding: 5rem 1.5rem;
+  overflow: hidden;
+}
+
+.clp-partners__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clp-partners__header {
+  max-width: 880px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.clp-partners__eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #eb4d2b;
+  margin-bottom: 1rem;
+}
+
+.clp-partners__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3.25rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.clp-partners__marquee {
+  position: relative;
+  overflow: hidden;
+  border-radius: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(19px);
+}
+
+.clp-partners__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.clp-partners__fade--left {
+  left: 0;
+  background: linear-gradient(to right, #000000, transparent);
+}
+
+.clp-partners__fade--right {
+  right: 0;
+  background: linear-gradient(to left, #000000, transparent);
+}
+
+.clp-partners__track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  padding: 0 0.5rem;
+  list-style: none;
+  margin: 0;
+}
+
+.clp-partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+  width: 172px;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: 2.5rem;
+}
+
+.clp-partners__logo {
+  height: auto;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  opacity: 0.94;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .clp-partners {
+    padding: 4rem 1rem;
+  }
+
+  .clp-partners__marquee {
+    border-radius: 40px;
+  }
+
+  .clp-partners__item {
+    height: 70px;
+    width: 140px;
+    padding-right: 1.5rem;
+  }
+
+  .clp-partners__track {
+    gap: 1.5rem;
+  }
+
+  .clp-partners__fade {
+    width: 40px;
+  }
+}

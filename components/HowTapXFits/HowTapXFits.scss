@@ -11,7 +11,7 @@
    ============================================ */
 .how-tapx-fits__heading {
   position: absolute;
-  top: 4vh;
+  top: 6vh;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-display);
@@ -22,7 +22,6 @@
   line-height: 1.08;
   letter-spacing: -0.03em;
   margin: 0;
-  margin-bottom: 3rem;
   white-space: nowrap;
   z-index: 5;
 }
@@ -81,7 +80,7 @@
 .how-tapx-fits__phone-col {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 60%;
   transform: translate(-50%, -50%);
 }
 
@@ -223,7 +222,7 @@
 }
 
 /* ============================================
-   RIGHT: STACKED LABELS + EXPANDABLE CARDS
+   RIGHT: CARDS WITH CONTENT + LABEL INSIDE
    Fixed position to the right of phone
    ============================================ */
 .how-tapx-fits__right-col {
@@ -234,65 +233,75 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  width: 320px;
+  width: 340px;
 }
 
 .how-tapx-fits__right-item {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  margin-bottom: 8px;
 }
 
+.how-tapx-fits__right-item--active .how-tapx-fits__right-label {
+  display: none;
+}
+
+/* Card - contains content + label */
 .how-tapx-fits__right-card {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  border-radius: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(235, 77, 43, 0.06) 0%,
-    rgba(245, 166, 35, 0.1) 100%
-  );
-  border-left: 4px solid #eb4d2b;
-  margin-bottom: 0;
+  background: linear-gradient(135deg, #eb4d2b 0%, #f5785a 50%, #eb4d2b 100%);
+  border-radius: 12px;
+  padding: 0;
   will-change: max-height, opacity;
   transition:
     max-height 0.4s ease,
-    opacity 0.3s ease,
-    margin-bottom 0.3s ease;
+    opacity 0.3s ease;
 }
 
 .how-tapx-fits__right-card--active {
-  max-height: 120px;
+  max-height: 160px;
   opacity: 1;
-  margin-bottom: 8px;
+  padding: 20px 22px;
 }
 
-.how-tapx-fits__right-card-inner {
-  padding: 16px 20px;
-}
-
-.how-tapx-fits__right-title {
+/* Content text inside card */
+.how-tapx-fits__right-content {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 500;
-  color: #1a1a1a;
-  line-height: 1.45;
+  color: #0a0a0a;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 
-.how-tapx-fits__right-text {
-  display: none;
+/* Label inside card (at bottom) */
+.how-tapx-fits__right-label-inside {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+  display: block;
 }
 
+/* Collapsed label (shown when card is collapsed) */
 .how-tapx-fits__right-label {
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
-  color: #eb4d2b;
-  padding: 10px 0;
+  color: #fff;
+  padding: 12px 18px;
   cursor: default;
   letter-spacing: 0.01em;
+  display: block;
+  background: linear-gradient(135deg, #eb4d2b 0%, #f5785a 50%, #eb4d2b 100%);
+  border-radius: 10px;
+}
+
+.how-tapx-fits__right-label--hidden {
+  display: none;
 }
 
 /* ============================================
@@ -300,7 +309,7 @@
    ============================================ */
 .how-tapx-fits__cta-wrap {
   position: absolute;
-  bottom: 8vh;
+  bottom: 9vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -350,36 +359,32 @@
 @media (max-width: 1200px) {
   .how-tapx-fits__phone {
     width: 280px;
-    height: 560px;
+    height: 540px;
   }
 
   .how-tapx-fits__right-col {
-    padding-left: 50px;
+    width: 300px;
   }
 }
 
 @media (max-width: 968px) {
-  .how-tapx-fits__layout {
-    flex-direction: column;
-    padding: 13vh 5% 10vh;
-    gap: 20px;
-    justify-content: flex-start;
-  }
-
   .how-tapx-fits__number-col {
     display: none;
   }
 
   .how-tapx-fits__phone-col {
-    order: 1;
+    top: 40%;
   }
 
   .how-tapx-fits__right-col {
-    order: 2;
-    padding-left: 0;
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 400px;
+    position: absolute;
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: 12vh;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 360px;
   }
 
   .how-tapx-fits__phone {
@@ -441,16 +446,17 @@
     width: 90%;
   }
 
-  .how-tapx-fits__right-card-inner {
-    padding: 16px 14px;
+  .how-tapx-fits__right-content {
+    font-size: 0.9rem;
   }
 
-  .how-tapx-fits__right-title {
-    font-size: 0.95rem;
+  .how-tapx-fits__right-label-inside {
+    font-size: 0.85rem;
   }
 
-  .how-tapx-fits__right-text {
-    font-size: 0.76rem;
+  .how-tapx-fits__right-label {
+    font-size: 0.9rem;
+    padding: 8px 0;
   }
 
   .how-tapx-fits__cta-wrap {
@@ -490,8 +496,8 @@
     border-radius: 24px;
   }
 
-  .how-tapx-fits__right-card-inner {
-    padding: 12px 10px;
+  .how-tapx-fits__right-content {
+    font-size: 0.85rem;
   }
 
   .how-tapx-fits__cta {

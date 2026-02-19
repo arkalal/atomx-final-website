@@ -1,0 +1,156 @@
+.clprob {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.clprob__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 4rem 3.5rem;
+}
+
+.clprob__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.8vw, 2.4rem);
+  color: #ffffff;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.clprob__track-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.clprob__track {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0 4rem;
+  padding-left: calc(50vw - 160px);
+  will-change: transform;
+}
+
+.clprob__card {
+  flex-shrink: 0;
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background: #1a1a1a;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    transform: translateY(-6px);
+
+    .clprob__card-image img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.clprob__card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  overflow: hidden;
+
+  img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    pointer-events: none;
+  }
+}
+
+.clprob__card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.clprob__card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.3rem;
+}
+
+.clprob__card-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .clprob__header {
+    padding: 0 2.5rem 2.5rem;
+  }
+
+  .clprob__track {
+    padding: 0 2.5rem;
+    padding-left: calc(50vw - 140px);
+    gap: 1rem;
+  }
+
+  .clprob__card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clprob {
+    padding: 3.5rem 0;
+  }
+
+  .clprob__header {
+    padding: 0 1.5rem 2rem;
+  }
+
+  .clprob__track {
+    padding: 0 1.5rem;
+    padding-left: calc(50vw - 110px);
+    gap: 0.8rem;
+  }
+
+  .clprob__card {
+    width: 220px;
+  }
+
+  .clprob__card-info {
+    padding: 1.2rem;
+  }
+
+  .clprob__card-title {
+    font-size: 1rem;
+  }
+
+  .clprob__card-subtitle {
+    font-size: 0.65rem;
+  }
+}
