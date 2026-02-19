@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
 import "./CashlessBenefits.scss";
 
 const benefitWords = [
@@ -44,15 +43,8 @@ const benefitWords = [
   },
 ];
 
-const eventLogos = Array.from({ length: 10 }, (_, i) => ({
-  src: `/assets/event-logos/${i + 1}.png`,
-  alt: `Event Partner ${i + 1}`,
-}));
-
 const CashlessBenefits = () => {
   const duplicated = [...benefitWords, ...benefitWords];
-  const reduceMotion = useReducedMotion();
-  const marqueeLogos = [...eventLogos, ...eventLogos];
   const [hoveredIdx, setHoveredIdx] = useState(null);
 
   return (
@@ -83,46 +75,6 @@ const CashlessBenefits = () => {
               <span className="clb__dot" />
             </span>
           ))}
-        </div>
-      </div>
-
-      <div className="clb__logos-section">
-        <div className="clb__logos-header">
-          <p className="clb__logos-eyebrow">TRUSTED BY ORGANIZERS</p>
-          <h3 className="clb__logos-title">
-            Powering cashless events across industries
-          </h3>
-        </div>
-
-        <div className="clb__logos-marquee">
-          <div className="clb__logos-fade-left" />
-          <div className="clb__logos-fade-right" />
-          <motion.div
-            className="clb__logos-track"
-            animate={reduceMotion ? undefined : { x: ["0%", "-50%"] }}
-            transition={
-              reduceMotion
-                ? undefined
-                : { duration: 18, ease: "linear", repeat: Infinity }
-            }
-          >
-            {marqueeLogos.map((logo, index) => (
-              <div key={`${logo.src}-${index}`} className="clb__logo-item">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={140}
-                  height={50}
-                  style={{
-                    objectFit: "contain",
-                    width: "auto",
-                    height: "auto",
-                  }}
-                  className="clb__logo-img"
-                />
-              </div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>

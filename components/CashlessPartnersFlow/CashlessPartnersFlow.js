@@ -5,12 +5,16 @@ import { motion, useReducedMotion } from "framer-motion";
 import "./CashlessPartnersFlow.scss";
 
 const partnerLogos = [
-  { name: "Partner 1", src: "/assets/cashless-payments/partner-1.svg" },
-  { name: "Partner 2", src: "/assets/cashless-payments/partner-2.svg" },
-  { name: "Partner 3", src: "/assets/cashless-payments/partner-3.svg" },
-  { name: "Partner 4", src: "/assets/cashless-payments/partner-4.svg" },
-  { name: "Partner 5", src: "/assets/cashless-payments/partner-5.svg" },
-  { name: "Partner 6", src: "/assets/cashless-payments/partner-6.svg" },
+  { name: "Event Partner 1", src: "/assets/event-logos/1.png" },
+  { name: "Event Partner 2", src: "/assets/event-logos/2.png" },
+  { name: "Event Partner 3", src: "/assets/event-logos/3.png" },
+  { name: "Event Partner 4", src: "/assets/event-logos/4.png" },
+  { name: "Event Partner 5", src: "/assets/event-logos/5.png" },
+  { name: "Event Partner 6", src: "/assets/event-logos/6.png" },
+  { name: "Event Partner 7", src: "/assets/event-logos/7.png" },
+  { name: "Event Partner 8", src: "/assets/event-logos/8.png" },
+  { name: "Event Partner 9", src: "/assets/event-logos/9.png" },
+  { name: "Event Partner 10", src: "/assets/event-logos/10.png" },
 ];
 
 const CashlessPartnersFlow = () => {
